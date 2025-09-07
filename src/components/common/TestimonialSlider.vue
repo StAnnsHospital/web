@@ -3,8 +3,8 @@
     <div class="auto-container">
       <!-- Sec Title -->
       <div class="sec-title text-center">
-        <span class="title">HAPPY Patient</span>
-        <h2 class="text-reveal-anim">What Says Our Patients</h2>
+        <span class="title">Testimonials / Reviews</span>
+        <h2 class="text-reveal-anim">What Our Patients Say</h2>
         <span class="divider"></span>
       </div>
       

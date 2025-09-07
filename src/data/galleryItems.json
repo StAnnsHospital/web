@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "image": "/images/gallery/1-1.JPG",
+    "title": "Hospital Exterior – Front",
+    "filters": ["infrastructure", "emergency"],
+    "tags": ["Multi-Speciality", "24x7 Emergency"]
+  },
+  {
+    "id": 2,
+    "image": "/images/gallery/1-2.JPG",
+    "title": "Rear Entrance & Driveway",
+    "filters": ["infrastructure", "emergency"],
+    "tags": ["Ambulance Access", "Ramp"]
+  },
+  {
+    "id": 3,
+    "image": "/images/gallery/1-3.JPG",
+    "title": "Main Lobby & Waiting",
+    "filters": ["OPD", "infrastructure"],
+    "tags": ["Patient Waiting", "Lobby"]
+  },
+  {
+    "id": 4,
+    "image": "/images/gallery/1-4.JPG",
+    "title": "Reception & OPD Corridor",
+    "filters": ["OPD", "infrastructure"],
+    "tags": ["Registration", "Outpatient"]
+  },
+  {
+    "id": 5,
+    "image": "/images/gallery/1-5.JPG",
+    "title": "OPD Consultation Zone",
+    "filters": ["OPD", "infrastructure"],
+    "tags": ["Consultation Rooms", "Outpatient"]
+  },
+  {
+    "id": 6,
+    "image": "/images/gallery/1-6.JPG",
+    "title": "General Ward",
+    "filters": ["inpatient"],
+    "tags": ["Inpatient Care", "Nursing"]
+  },
+  {
+    "id": 7,
+    "image": "/images/gallery/1-7.JPG",
+    "title": "Private Patient Room",
+    "filters": ["inpatient"],
+    "tags": ["Private Room", "Comfort"]
+  },
+  {
+    "id": 8,
+    "image": "/images/gallery/1-8.JPG",
+    "title": "Operation Theatre",
+    "filters": ["surgery"],
+    "tags": ["OT", "Advanced Equipment"]
+  },
+  {
+    "id": 9,
+    "image": "/images/gallery/1-9.JPG",
+    "title": "Central Sterilization",
+    "filters": ["support-services", "surgery"],
+    "tags": ["CSSD", "Infection Control"]
+  },
+  {
+    "id": 10,
+    "image": "/images/gallery/1-10.JPG",
+    "title": "Elevators & Access",
+    "filters": ["infrastructure", "support-services"],
+    "tags": ["Accessibility", "Patient Transport"]
+  }
+]

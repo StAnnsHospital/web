@@ -3,36 +3,36 @@
     "id": 1,
     "icon": "flaticon-heartbeat",
     "title": "Health Check",
-    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+    "description": "Affordable preventive packages (cardiac, diabetes, women’s health) with guided consultations and same-day reports for most routine tests."
   },
   {
     "id": 2,
     "icon": "flaticon-surgery-room",
     "title": "Operation Theater",
-    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+    "description": "Modern OTs for general, orthopaedic, obstetric & gynaecology and oncology surgeries with strict infection-control and laparoscopic capability."
   },
   {
     "id": 3,
     "icon": "flaticon-pharmacy",
     "title": "Pharmacy Support",
-    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+    "description": "On-site pharmacy for essential medicines and counselling on safe use, ensuring continuity of care after discharge."
   },
   {
     "id": 4,
     "icon": "flaticon-transport",
     "title": "Ambulance Car",
-    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+    "description": "24×7 ambulance services with trained staff for emergency response and inter-facility transfers across Warangal and nearby areas."
   },
   {
     "id": 5,
     "icon": "flaticon-lab",
     "title": "Lab Tests",
-    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+    "description": "Comprehensive pathology and biochemistry with sample collection and timely results; integrated with imaging like X-ray, CT and Ultrasound."
   },
   {
     "id": 6,
     "icon": "flaticon-first-aid",
     "title": "Intensive Care",
-    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+    "description": "ICU and neonatal care (NICU) with continuous monitoring and ventilator support, backed by a multidisciplinary specialist team."
   }
 ]

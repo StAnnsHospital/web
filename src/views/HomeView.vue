@@ -24,15 +24,15 @@
           <div class="content-column col-lg-6 col-md-12 col-sm-12 order-lg-2">
             <div class="inner-column">
               <div class="sec-title">
-                <span class="sub-title">OUR MEDICAL</span>
-                <h2 class="text-reveal-anim">We're setting Standards in <br> Research what's more, <br> Clinical Care.</h2>
+                <span class="sub-title">ST. ANN’S HOSPITAL, FATHIMANAGAR</span>
+                <h2 class="text-reveal-anim">72 Years of Care.<br>Future of Multispecialty <br> Excellence in Clinical Care.</h2>
                 <span class="divider"></span>
-                <p>We provide the most full medical services, so every person could have the opportunity to receive qualitative medical help.</p>
-                <p>Our Clinic has grown to provide a world class facility for the treatment of tooth loss, dental cosmetics and bore advanced restorative dentistry. We are among the most qualified implant providers in the AUS with over 30 years of quality training and experience.</p>
+                <p>Founded in 1954 with a modest 12-room building, St. Ann’s has grown—through faith, sacrifice, and service—into a 200-bed multispecialty hospital trusted by families across Warangal and beyond. Our mission remains simple and steadfast: provide dignified, affordable, and compassionate care to every person, especially the poor and underserved.</p>
+                <p>Today we offer comprehensive services in General Medicine, General Surgery, Obstetrics & Gynaecology, Pediatrics, Orthopedics, Neurology, Nephrology, Endocrinology, Physiotherapy, Rehabilitation, Emergency Medicine, and Oncology. Modern operating theatres, intensive and neonatal care, digital imaging and laboratory services, and 24×7 emergency and ambulance support ensure timely, safe treatment.</p>
               </div>
               <div class="link-box">
                 <figure class="signature"><img src="/images/resource/signature.png" alt=""></figure>
-                <a href="#" class="theme-btn btn-style-one"><span class="btn-title">More About</span></a>
+                <router-link to="/about" class="theme-btn btn-style-one"><span class="btn-title">More About</span></router-link>
               </div>
             </div>
           </div>
@@ -41,15 +41,15 @@
           <div class="images-column col-lg-6 col-md-12 col-sm-12">
             <div class="inner-column">
               <div class="video-link">
-                <a href="https://www.youtube.com/watch?v=4UvS3k8D4rs" class="play-btn lightbox-image" data-fancybox="images">
+                <a href="https://www.youtube.com/watch?v=h0JczndhvKI" class="play-btn lightbox-image" data-fancybox="images">
                   <span class="flaticon-play-button-1"></span>
                 </a>
               </div>
-              <figure class="image-1"><img src="/images/resource/image-1.png" alt=""></figure>
-              <figure class="image-2"><img src="/images/resource/image-2.png" alt=""></figure>
+              <figure class="image-1"><img src="/images/resource/about-image-1.png" alt=""></figure>
+              <figure class="image-2"><img src="/images/resource/about-image-2.png" alt=""></figure>
               <figure class="image-3">
                 <span class="hex"></span>
-                <img src="/images/resource/image-3.png" alt="">
+                <img src="/images/resource/about-image-3.png" alt="">
               </figure>
             </div>
           </div>
@@ -238,17 +238,8 @@ onMounted(() => {
     
     // Wait for libraries to load
     setTimeout(() => {
-      // Initialize all Swiper sliders
-      if ($('.banner-swiper').length && typeof (window as any).Swiper === 'function') {
-        new (window as any).Swiper(".banner-swiper", {
-          slidesPerView: 1,
-          loop: true,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        })
-      }
+  // Banner Swiper is initialized inside HeroSlider component; avoid duplicate init here.
+  // (Previously initializing here caused blank slides due to double Swiper instances.)
 
       if ($('.testi-three-swiper').length && typeof (window as any).Swiper === 'function') {
         new (window as any).Swiper(".testi-three-swiper", {

@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "backgroundImage": "/images/main-slider/1.jpg",
-    "title": "Welcome to our Medical Care Center",
-    "heading": "We take care our patients health",
-    "description": "I realized that becoming a doctor, I can only help a small community. But by becoming a doctor, I can help my whole country.",
+    "backgroundImage": "/images/main-slider/home-banner-2.jpg",
+    "title": "Welcome to St. Ann's Hospital",
+    "heading": "Healing Generations, Shaping Tomorrow",
+    "description": "Since 1954, our 200-bed multispecialty hospital delivers compassionate, affordable care across cancer and general specialties.",
     "buttons": [
       { "text": "About Us", "path": "/about", "style": "btn-style-one" },
       { "text": "Our Services", "path": "/services", "style": "btn-style-two" }
@@ -12,10 +12,10 @@
   },
   {
     "id": 2,
-    "backgroundImage": "/images/main-slider/2.jpg",
-    "title": "Welcome to our Medical Care Center",
-    "heading": "We take care our patients health",
-    "description": "I realized that becoming a doctor, I can only help a small community. But by becoming a doctor, I can help my whole country.",
+    "backgroundImage": "/images/main-slider/home-banner.jpg",
+    "title": "Advanced Cancer & Multispecialty Care",
+    "heading": "Compassionate Care: Yesterday, Today, Tomorrow",
+    "description": "Comprehensive oncology with LINAC radiation, surgery, and chemotherapy, plus 24x7 emergency, ICU/NICU, and modern diagnostics.",
     "buttons": [
       { "text": "About Us", "path": "/about", "style": "btn-style-one" },
       { "text": "Our Services", "path": "/services", "style": "btn-style-two" }

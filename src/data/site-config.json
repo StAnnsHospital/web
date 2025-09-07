@@ -1,18 +1,18 @@
 {
   "site": {
-    "name": "St. Ann's Hospital",
-    "tagline": "Health and Medical Care Center",
+    "name": "St. Ann’s Hospital, Fathimanagar, Kazipet, Warangal",
+    "tagline": "Trusted Care Since 1954. A Future of Excellence",
     "description": "We provide the most full medical services, so every person could have the opportunity to receive qualitative medical help.",
     "logo": "/images/logo.png",
     "logoFooter": "/images/logo-2.png",
     "favicon": "/images/favicon.png"
   },
   "contact": {
-    "address": "234 Triumph, Los Angeles, California, US",
-    "phone": "+898 68679 575",
-    "email": "info@gmail.com",
-    "hours": "Mon - Sat 8.00 - 18.00. Sunday CLOSED",
-    "emergency": "(0080) 123-453-789"
+    "address": "H. No: 24-7-7/3 & 24-7-4/1, Fathimanagar, Kazipet, Hamumakonda – 506004",
+    "phone": "+91 8019815639",
+    "email": "stannshospitalwarangal@yahoo.co.in",
+    "hours": "Mon - Sun 9.00 AM - 5.00 PM",
+    "emergency": "+91 8008426690"
   },
   "social": {
     "facebook": "#",

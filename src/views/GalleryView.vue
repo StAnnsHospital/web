@@ -1,204 +1,70 @@
 <template>
   <div class="page-wrapper">
-    <!-- Preloader -->
     <!-- Preloader handled globally -->
-    
     <AppHeader />
-    
+
     <!--Page Title-->
-    <section class="page-title" style="background-image: url(/images/background/8.jpg);">
+    <section class="page-title" style="background-image: url(/images/background/gallery-header-bg.jpg);">
       <div class="auto-container">
         <div class="title-outer">
           <h1>Gallery</h1>
           <ul class="page-breadcrumb">
             <li><router-link to="/">Home</router-link></li>
             <li>Gallery</li>
-          </ul> 
+          </ul>
         </div>
       </div>
     </section>
-    <!--End Page Title-->
 
     <!-- Portfolio Section -->
     <section class="portfolio-section alternate">
       <div class="auto-container">
-        <!--MixitUp Galery-->
         <div class="mixitup-gallery">
-          
           <div class="btns-outer">
-            <!--Filter-->
             <ul class="filter-tabs filter-btns clearfix">
-              <li class="filter active" data-role="button" data-filter="all">All</li>
-              <li class="filter" data-role="button" data-filter=".cancer">Cancer</li>
-              <li class="filter" data-role="button" data-filter=".detal-care">Detal Care</li>
-              <li class="filter" data-role="button" data-filter=".cardiology">Cardiology</li>
-              <li class="filter" data-role="button" data-filter=".dental">Dental</li>
-              <li class="filter" data-role="button" data-filter=".eye-care">Eye Care</li>
-            </ul>                           
+              <li
+                v-for="filter in uiFilters"
+                :key="filter.key"
+                :class="['filter', { active: filter.key === activeFilter }]"
+                data-role="button"
+                :data-filter="filter.key === 'all' ? 'all' : '.' + filter.key"
+                @click.prevent="setFilter(filter.key)"
+              >
+                {{ filter.label }}
+              </li>
+            </ul>
           </div>
 
           <div class="filter-list row mid-spacing">
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix detal-care dental col-lg-4 col-md-6 col-sm-12">
+            <div
+              v-for="item in filteredItems"
+              :key="item.id"
+              :class="['portfolio-block', 'col-lg-4', 'col-md-6', 'col-sm-12', ...item.filters]"
+            >
               <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-1.jpg" alt=""></figure>
+                <figure class="image"><img :src="item.image" :alt="item.title" /></figure>
                 <div class="overlay">
-                  <a href="/images/gallery/1-1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
+                  <a :href="item.image" class="icon-box lightbox-image" data-fancybox="gallery">
+                    <span class="fa fa-expand"></span>
+                  </a>
                   <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
+                    <h5>{{ item.title }}</h5>
                     <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
+                      <template v-for="(tag, idx) in item.tags" :key="tag">
+                        <a href="#">{{ tag }}</a><span v-if="idx < item.tags.length - 1">,</span>
+                      </template>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix cancer cardiology eye-care col-lg-4 col-md-6 col-sm-12">
-              <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-2.jpg" alt=""></figure>
-                <div class="overlay">
-                  <a href="/images/gallery/1-2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                  <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
-                    <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix detal-care dental cardiology col-lg-4 col-md-6 col-sm-12">
-              <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-3.jpg" alt=""></figure>
-                <div class="overlay">
-                  <a href="/images/gallery/1-3.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                  <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
-                    <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix cancer dental eye-care col-lg-4 col-md-6 col-sm-12">
-              <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-4.jpg" alt=""></figure>
-                <div class="overlay">
-                  <a href="/images/gallery/1-4.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                  <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
-                    <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix detal-care cardiology col-lg-4 col-md-6 col-sm-12">
-              <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-5.jpg" alt=""></figure>
-                <div class="overlay">
-                  <a href="/images/gallery/1-5.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                  <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
-                    <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix cancer cardiology eye-care col-lg-4 col-md-6 col-sm-12">
-              <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-6.jpg" alt=""></figure>
-                <div class="overlay">
-                  <a href="/images/gallery/1-6.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                  <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
-                    <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix cancer dental eye-care col-lg-4 col-md-6 col-sm-12">
-              <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-7.jpg" alt=""></figure>
-                <div class="overlay">
-                  <a href="/images/gallery/1-7.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                  <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
-                    <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix detal-care cardiology col-lg-4 col-md-6 col-sm-12">
-              <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-8.jpg" alt=""></figure>
-                <div class="overlay">
-                  <a href="/images/gallery/1-8.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                  <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
-                    <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Block -->
-            <div class="portfolio-block all mix cancer cardiology eye-care col-lg-4 col-md-6 col-sm-12">
-              <div class="image-box">
-                <figure class="image"><img src="/images/gallery/1-9.jpg" alt=""></figure>
-                <div class="overlay">
-                  <a href="/images/gallery/1-9.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                  <div class="title-box">
-                    <h5>Diagnostic Imagine</h5>
-                    <div class="cat">
-                      <a href="#">Orthopedics</a>,
-                      <a href="#">Pharmacy</a>,
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div> <!-- /.filter-list -->
         </div>
-
         <div class="btn-box">
           <a href="#" class="theme-btn btn-style-three load-more"><span class="btn-title">Load More</span></a>
         </div>
       </div>
     </section>
-    <!-- End Portfolio Section -->
 
     <ClientSlider />
     <AppFooter />
@@ -206,38 +72,65 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import ClientSlider from '@/components/common/ClientSlider.vue'
+import rawItems from '@/data/galleryItems.json'
+
+// Allow vendor globals used by legacy scripts to be accessed safely from TS
+declare global {
+  interface Window {
+    $?: any
+    mixitup?: any
+    __mixitupInstance?: { filter?: (selector: string) => void }
+  }
+}
+
+const galleryItems = ref(rawItems)
+
+const activeFilter = ref('all')
+
+// Filtering is driven by Vue's computed `filteredItems` to avoid conflicts with vendor DOM plugins.
+// Build UI-friendly filter list (keeps 'all' first)
+const uiFilters = computed(() => {
+  const set = new Set<string>()
+  galleryItems.value.forEach(i => i.filters.forEach((f: string) => set.add(f)))
+  const keys = ['all', ...Array.from(set)]
+  return keys.map(k => ({
+    key: k,
+    label: k === 'all' ? 'All' : k.replace(/[-_]/g, ' ').replace(/\b\w/g, s => s.toUpperCase())
+  }))
+})
+
+// Filtered items for Vue-driven filtering fallback (works when MixItUp isn't present)
+const filteredItems = computed(() => {
+  if (activeFilter.value === 'all') return galleryItems.value
+  return galleryItems.value.filter(i => Array.isArray(i.filters) && i.filters.includes(activeFilter.value))
+})
+
+
+
+const setFilter = (key: string) => {
+  // Pure Vue-driven filter: update the active filter and let `filteredItems` recompute.
+  activeFilter.value = key
+}
 
 onMounted(() => {
-  // Initialize gallery functionality
-  if (typeof window !== 'undefined' && (window as any).$) {
-    const $ = (window as any).$
-    
-    // Wait for libraries to load
-    setTimeout(() => {
-      // MixItup Gallery - Initialize filtering functionality
-      if ($('.filter-list').length && typeof $.fn.mixItUp === 'function') {
-        $('.filter-list').mixItUp()
-      } else if ($('.filter-list').length) {
-        console.warn('MixItUp library not loaded')
-      }
-
-      // LightBox / Fancybox - Initialize lightbox for image viewing
-      if ($('.lightbox-image').length && typeof $.fn.fancybox === 'function') {
-        $('.lightbox-image').fancybox({
+  // Small delay for vendor libraries to attach
+  setTimeout(() => {
+    if (typeof window === 'undefined') return
+    // Initialize Fancybox if available
+    try {
+      if (window.$ && window.$.fn && typeof window.$.fn.fancybox === 'function') {
+        window.$('.lightbox-image').fancybox({
           openEffect: 'fade',
-          closeEffect: 'fade',
-          helpers: {
-            media: {}
-          }
+          closeEffect: 'fade'
         })
-      } else if ($('.lightbox-image').length) {
-        console.warn('Fancybox library not loaded')
       }
-    }, 100) // Small delay to ensure libraries are loaded
-  }
+    } catch {
+      // ignore
+    }
+  }, 120)
 })
 </script>

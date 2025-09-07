@@ -1,47 +1,110 @@
 [
   {
     "id": 1,
-    "text": "Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!",
+    "text": "Environment neat & clean. Treatment is superb...thank you for saving my mom; 5 years on and no problems.",
     "author": {
-      "name": "Lara Croft",
-      "designation": "Restaurant Owner",
-      "image": "/images/resource/testi-thumb-1.jpg"
+      "name": "Md. Nadeem Khaja",
+      "designation": "Google Reviewer",
+      "image": "/images/resource/testi-image-1.png"
     }
   },
   {
     "id": 2,
-    "text": "Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!",
+    "text": "Good environment and staff; doctors give helpful health suggestions. Simple and best place for cancer treatment.",
     "author": {
-      "name": "John Smith",
-      "designation": "Business Owner",
-      "image": "/images/resource/testi-thumb-2.jpg"
+      "name": "Kalluri Anvesh",
+      "designation": "Google Reviewer",
+      "image": "/images/resource/testi-image-1.png"
     }
   },
   {
     "id": 3,
-    "text": "Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!",
+    "text": "Good advanced radiation machine for cancer patients—no need to go to Hyderabad.",
     "author": {
-      "name": "Sarah Johnson",
-      "designation": "Teacher",
-      "image": "/images/resource/testi-thumb-3.jpg"
+      "name": "Satish Kumar",
+      "designation": "Google Reviewer",
+      "image": "/images/resource/testi-image-1.png"
     }
   },
   {
     "id": 4,
-    "text": "Excellent medical care and professional staff. The doctors are knowledgeable and caring. I highly recommend this medical center to anyone looking for quality healthcare.",
+    "text": "Good treatment; recovery was very quick - 100% improvement.",
     "author": {
-      "name": "Michael Brown",
-      "designation": "Engineer",
-      "image": "/images/resource/testi-thumb-1.jpg"
+      "name": "Siddhartha Sadhula",
+      "designation": "Google Reviewer",
+      "image": "/images/resource/testi-image-1.png"
     }
   },
   {
     "id": 5,
-    "text": "The facilities are modern and clean. The staff is friendly and efficient. I've been coming here for years and always receive excellent care.",
+    "text": "They have a very humane approach towards their patients.",
     "author": {
-      "name": "Emily Davis",
-      "designation": "Nurse",
-      "image": "/images/resource/testi-thumb-2.jpg"
+      "name": "Ravi Anand",
+      "designation": "Local Guide",
+      "image": "/images/resource/testi-image-1.png"
+    }
+  },
+  {
+    "id": 6,
+    "text": "Great service and awesome hospitality.",
+    "author": {
+      "name": "Sagar Gabbeta",
+      "designation": "Local Guide",
+      "image": "/images/resource/testi-image-1.png"
+    }
+  },
+  {
+    "id": 7,
+    "text": "Nice hospital with decent facilities.",
+    "author": {
+      "name": "Vamshi B.",
+      "designation": "Local Guide",
+      "image": "/images/resource/testi-image-1.png"
+    }
+  },
+  {
+    "id": 8,
+    "text": "Good hospital—neat surroundings, well maintained, and good hospitality staff.",
+    "author": {
+      "name": "Sunil Mamidala",
+      "designation": "Local Guide",
+      "image": "/images/resource/testi-image-1.png"
+    }
+  },
+  {
+    "id": 9,
+    "text": "This hospital is a heaven—patients are treated by angels.",
+    "author": {
+      "name": "shinith c",
+      "designation": "Local Guide",
+      "image": "/images/resource/testi-image-1.png"
+    }
+  },
+  {
+    "id": 10,
+    "text": "Good hospital and more affordable compared to corporate hospitals.",
+    "author": {
+      "name": "Sun Ray",
+      "designation": "Google Reviewer",
+      "image": "/images/resource/testi-image-1.png"
+    }
+  },
+  {
+    "id": 11,
+    "text": "Nice hospital, good service.",
+    "author": {
+      "name": "Mummadi Srinivas",
+      "designation": "Local Guide",
+      "image": "/images/resource/testi-image-1.png"
+    }
+  },
+  {
+    "id": 12,
+    "text": "Best hospital in Kazipet localities.",
+    "author": {
+      "name": "Bala Prudhvi Reddy Dodda",
+      "designation": "Local Guide",
+      "image": "/images/resource/testi-image-1.png"
     }
   }
 ]
