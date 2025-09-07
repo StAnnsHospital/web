@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "backgroundImage": "/images/main-slider/1.jpg",
+    "title": "Welcome to our Medical Care Center",
+    "heading": "We take care our patients health",
+    "description": "I realized that becoming a doctor, I can only help a small community. But by becoming a doctor, I can help my whole country.",
+    "buttons": [
+      { "text": "About Us", "path": "/about", "style": "btn-style-one" },
+      { "text": "Our Services", "path": "/services", "style": "btn-style-two" }
+    ]
+  },
+  {
+    "id": 2,
+    "backgroundImage": "/images/main-slider/2.jpg",
+    "title": "Welcome to our Medical Care Center",
+    "heading": "We take care our patients health",
+    "description": "I realized that becoming a doctor, I can only help a small community. But by becoming a doctor, I can help my whole country.",
+    "buttons": [
+      { "text": "About Us", "path": "/about", "style": "btn-style-one" },
+      { "text": "Our Services", "path": "/services", "style": "btn-style-two" }
+    ]
+  }
+]

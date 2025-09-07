@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "icon": "flaticon-heartbeat",
+    "title": "Health Check",
+    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+  },
+  {
+    "id": 2,
+    "icon": "flaticon-surgery-room",
+    "title": "Operation Theater",
+    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+  },
+  {
+    "id": 3,
+    "icon": "flaticon-pharmacy",
+    "title": "Pharmacy Support",
+    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+  },
+  {
+    "id": 4,
+    "icon": "flaticon-transport",
+    "title": "Ambulance Car",
+    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+  },
+  {
+    "id": 5,
+    "icon": "flaticon-lab",
+    "title": "Lab Tests",
+    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+  },
+  {
+    "id": 6,
+    "icon": "flaticon-first-aid",
+    "title": "Intensive Care",
+    "description": "We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff."
+  }
+]

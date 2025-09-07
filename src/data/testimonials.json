@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "text": "Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!",
+    "author": {
+      "name": "Lara Croft",
+      "designation": "Restaurant Owner",
+      "image": "/images/resource/testi-thumb-1.jpg"
+    }
+  },
+  {
+    "id": 2,
+    "text": "Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!",
+    "author": {
+      "name": "John Smith",
+      "designation": "Business Owner",
+      "image": "/images/resource/testi-thumb-2.jpg"
+    }
+  },
+  {
+    "id": 3,
+    "text": "Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!",
+    "author": {
+      "name": "Sarah Johnson",
+      "designation": "Teacher",
+      "image": "/images/resource/testi-thumb-3.jpg"
+    }
+  },
+  {
+    "id": 4,
+    "text": "Excellent medical care and professional staff. The doctors are knowledgeable and caring. I highly recommend this medical center to anyone looking for quality healthcare.",
+    "author": {
+      "name": "Michael Brown",
+      "designation": "Engineer",
+      "image": "/images/resource/testi-thumb-1.jpg"
+    }
+  },
+  {
+    "id": 5,
+    "text": "The facilities are modern and clean. The staff is friendly and efficient. I've been coming here for years and always receive excellent care.",
+    "author": {
+      "name": "Emily Davis",
+      "designation": "Nurse",
+      "image": "/images/resource/testi-thumb-2.jpg"
+    }
+  }
+]

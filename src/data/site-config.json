@@ -1,0 +1,93 @@
+{
+  "site": {
+    "name": "St. Ann's Hospital",
+    "tagline": "Health and Medical Care Center",
+    "description": "We provide the most full medical services, so every person could have the opportunity to receive qualitative medical help.",
+    "logo": "/images/logo.png",
+    "logoFooter": "/images/logo-2.png",
+    "favicon": "/images/favicon.png"
+  },
+  "contact": {
+    "address": "234 Triumph, Los Angeles, California, US",
+    "phone": "+898 68679 575",
+    "email": "info@gmail.com",
+    "hours": "Mon - Sat 8.00 - 18.00. Sunday CLOSED",
+    "emergency": "(0080) 123-453-789"
+  },
+  "social": {
+    "facebook": "#",
+    "twitter": "#",
+    "skype": "#",
+    "linkedin": "#",
+    "instagram": "#",
+    "pinterest": "#"
+  },
+  "navigation": {
+    "main": [
+      {
+        "label": "Home",
+        "path": "/"
+      },
+      {
+        "label": "Pages",
+        "path": "/pages",
+        "children": [
+          { "label": "About Us", "path": "/about" },
+          { "label": "Services", "path": "/services" },
+          { "label": "Gallery", "path": "/gallery" },
+          { "label": "Pricing Table", "path": "/pricing" },
+          { "label": "UI Elements", "path": "/elements" },
+          { "label": "Coming Soon", "path": "/coming-soon" },
+          { "label": "Error 404", "path": "/error" },
+          { "label": "Terms and Condition", "path": "/terms" }
+        ]
+      },
+      {
+        "label": "Doctors",
+        "path": "/doctors",
+        "children": [
+          { "label": "Doctors", "path": "/doctors" },
+          { "label": "Doctor Detail", "path": "/doctor-detail" }
+        ]
+      },
+      {
+        "label": "Departments",
+        "path": "/departments",
+        "children": [
+          { "label": "Departments", "path": "/departments" },
+          { "label": "Cardiology", "path": "/departments/cardiology" },
+          { "label": "Neurology", "path": "/departments/neurology" },
+          { "label": "Urology", "path": "/departments/urology" },
+          { "label": "Gynecological", "path": "/departments/gynecological" },
+          { "label": "Pediatrical", "path": "/departments/pediatrical" },
+          { "label": "Laboratory", "path": "/departments/laboratory" }
+        ]
+      },
+      {
+        "label": "Blog",
+        "path": "/blog",
+        "children": [
+          { "label": "Standard", "path": "/blog" },
+          { "label": "Checkerboard", "path": "/blog/checkerboard" },
+          { "label": "Masonry", "path": "/blog/masonry" },
+          { "label": "Two Columns", "path": "/blog/two-col" },
+          { "label": "Three Columns", "path": "/blog/three-col" },
+          { "label": "Four Columns", "path": "/blog/four-col" },
+          { "label": "Four Columns Wide", "path": "/blog/four-col-wide" },
+          {
+            "label": "Post Types",
+            "children": [
+              { "label": "Image Post", "path": "/blog/post/image" },
+              { "label": "Gallery Post", "path": "/blog/post/gallery" },
+              { "label": "Link Post", "path": "/blog/post/link" },
+              { "label": "Audio Post", "path": "/blog/post/audio" },
+              { "label": "Quote Post", "path": "/blog/post/quote" },
+              { "label": "Video Post", "path": "/blog/post/video" }
+            ]
+          }
+        ]
+      },
+      { "label": "Contact", "path": "/contact" }
+    ]
+  }
+}

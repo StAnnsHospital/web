@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Cardiology",
+    "slug": "cardiology",
+    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
+    "icon": "flaticon-heart-2",
+    "image": "/images/resource/service-1.jpg",
+    "doctors": ["Dr. Morila Wood"],
+    "services": ["Heart Checkup", "ECG", "Echocardiogram"]
+  },
+  {
+    "id": 2,
+    "name": "Neurology",
+    "slug": "neurology",
+    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
+    "icon": "flaticon-brain",
+    "image": "/images/resource/service-2.jpg",
+    "doctors": ["Dr. John Smith"],
+    "services": ["Brain Scan", "Neurological Exam", "EEG"]
+  },
+  {
+    "id": 3,
+    "name": "Urology",
+    "slug": "urology",
+    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
+    "icon": "flaticon-kidney",
+    "image": "/images/resource/service-3.jpg",
+    "doctors": ["Dr. Mike Johnson"],
+    "services": ["Kidney Checkup", "Prostate Exam", "Urine Analysis"]
+  },
+  {
+    "id": 4,
+    "name": "Gynecological",
+    "slug": "gynecological",
+    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
+    "icon": "flaticon-ovum",
+    "image": "/images/resource/service-12.jpg",
+    "doctors": ["Dr. Sarah Wilson"],
+    "services": ["Prenatal Care", "Pap Smear", "Ultrasound"]
+  },
+  {
+    "id": 5,
+    "name": "Pediatrical",
+    "slug": "pediatrical",
+    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
+    "icon": "flaticon-parents",
+    "image": "/images/resource/service-10.jpg",
+    "doctors": ["Dr. Lisa Brown"],
+    "services": ["Child Checkup", "Vaccination", "Growth Monitoring"]
+  },
+  {
+    "id": 6,
+    "name": "Laboratory",
+    "slug": "laboratory",
+    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
+    "icon": "flaticon-science",
+    "image": "/images/resource/service-11.jpg",
+    "doctors": ["Dr. Tom Davis"],
+    "services": ["Blood Tests", "Pathology", "Microbiology"]
+  }
+]

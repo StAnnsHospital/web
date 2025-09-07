@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Cardiology",
+    "price": "$299",
+    "period": "Per Month",
+    "features": [
+      "Functional Diagnostics",
+      "Allergens Drugs",
+      "Pollen Allergens",
+      "Food Allergens"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Dental Care",
+    "price": "$120",
+    "period": "Per Month",
+    "features": [
+      "Tooth implantation",
+      "Laser Dentistry",
+      "Tests and Treatment",
+      "Medical Consultation"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Body Checkup",
+    "price": "$150",
+    "period": "Per Month",
+    "features": [
+      "Tests and Treatment",
+      "Tests and Treatment",
+      "Laboratory Services",
+      "Food Allergens"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Blood Test",
+    "price": "$100",
+    "period": "Per Month",
+    "features": [
+      "Blood Test Service",
+      "Safety Training Tips",
+      "Tests and Treatment",
+      "Food Allergens"
+    ]
+  }
+]

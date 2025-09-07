@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icon": "flaticon-charity",
+    "title": "Quality & Safety",
+    "description": "Our Delmont hospital utilizes state of the art technology and employs a team of true experts."
+  },
+  {
+    "id": 2,
+    "icon": "flaticon-lifeline",
+    "title": "Leading Technology",
+    "description": "Our Delmont hospital utilizes state of the art technology and employs a team of true experts."
+  },
+  {
+    "id": 3,
+    "icon": "flaticon-doctor",
+    "title": "Experts by Experience",
+    "description": "Our Delmont hospital utilizes state of the art technology and employs a team of true experts."
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Morila Wood",
+    "designation": "MBBS (Sydney), FRACS (Paediatric Surgery)",
+    "image": "/images/resource/team-1.jpg",
+    "specialization": "Endocrinology, Paediatric Medicine, Urology",
+    "experience": 25,
+    "bio": "After graduating from West Virginia University Medical School, Dr. Emily Haden completed a two-year fellowship in sports medicine at Akron Children's Hospital. During his training at Akron, Dr. Emily Haden Alex was team physician for the University of Akron and Walsh University.",
+    "education": "Doctor of Medicine, University of Texas, USA (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)",
+    "address": "Suite 27, Medical Centre, The Sunshine Coast Private Hospital, QLD 4556",
+    "timing": "Monday - Friday 08:00 - 20:00, Saturday 09:00 - 18:00, Sunday 09:00 - 18:00",
+    "phone": "+1-23-345-6789",
+    "email": "myemail@yourdomain.com",
+    "website": "www.yourdomain.com",
+    "social": {
+      "facebook": "#",
+      "linkedin": "#",
+      "twitter": "#",
+      "pinterest": "#",
+      "instagram": "#",
+      "google": "#"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Dr. Emily Haden",
+    "designation": "Dental Surgeon",
+    "image": "/images/resource/team-2.jpg",
+    "specialization": "Dentistry, Oral Surgery",
+    "experience": 12,
+    "bio": "Dr. Emily Haden is a highly skilled dental surgeon with extensive experience in oral and maxillofacial surgery. She has completed advanced training in cosmetic dentistry and implantology.",
+    "education": "Doctor of Dental Surgery, University of California (2008) Advanced Implantology Certificate (2010)",
+    "address": "Suite 15, Dental Center, The Sunshine Coast Private Hospital, QLD 4556",
+    "timing": "Monday - Friday 09:00 - 17:00, Saturday 09:00 - 15:00, Sunday Closed",
+    "phone": "+1-23-345-6788",
+    "email": "emily.haden@yourdomain.com",
+    "website": "www.dremilyhaden.com",
+    "social": {
+      "facebook": "#",
+      "linkedin": "#",
+      "twitter": "#",
+      "pinterest": "#",
+      "instagram": "#",
+      "google": "#"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Dr. Hellen Hill",
+    "designation": "Dental Surgeon",
+    "image": "/images/resource/team-3.jpg",
+    "specialization": "Orthodontics, Pediatric Dentistry",
+    "experience": 10,
+    "bio": "Dr. Hellen Hill specializes in orthodontics and pediatric dentistry. She has a gentle approach with children and extensive experience in braces and clear aligners.",
+    "education": "Doctor of Dental Medicine, University of Sydney (2010) Orthodontics Residency (2012)",
+    "address": "Suite 22, Orthodontic Center, The Sunshine Coast Private Hospital, QLD 4556",
+    "timing": "Monday - Friday 08:00 - 16:00, Saturday 08:00 - 12:00, Sunday Closed",
+    "phone": "+1-23-345-6787",
+    "email": "hellen.hill@yourdomain.com",
+    "website": "www.drhellenhill.com",
+    "social": {
+      "facebook": "#",
+      "linkedin": "#",
+      "twitter": "#",
+      "pinterest": "#",
+      "instagram": "#",
+      "google": "#"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Dr. Audrey Button",
+    "designation": "Dental Surgeon",
+    "image": "/images/resource/team-4.jpg",
+    "specialization": "Periodontics, Cosmetic Dentistry",
+    "experience": 8,
+    "bio": "Dr. Audrey Button is a periodontist and cosmetic dentist with a focus on gum health and aesthetic dental treatments. She uses the latest techniques in laser dentistry.",
+    "education": "Doctor of Dental Surgery, University of Melbourne (2012) Periodontics Fellowship (2014)",
+    "address": "Suite 18, Periodontics Center, The Sunshine Coast Private Hospital, QLD 4556",
+    "timing": "Monday - Friday 09:00 - 18:00, Saturday 09:00 - 14:00, Sunday Closed",
+    "phone": "+1-23-345-6786",
+    "email": "audrey.button@yourdomain.com",
+    "website": "www.draudreybutton.com",
+    "social": {
+      "facebook": "#",
+      "linkedin": "#",
+      "twitter": "#",
+      "pinterest": "#",
+      "instagram": "#",
+      "google": "#"
+    }
+  }
+]
