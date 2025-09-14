@@ -48,13 +48,38 @@ jobs:
     - name: Build
       run: |
         echo "Starting build process..."
-        npm run build
+        NODE_ENV=production npm run build
         echo "Build completed successfully"
+      env:
+        NODE_ENV: production
+        
+    - name: Fix asset paths for GitHub Pages
+      run: |
+        echo "Fixing asset paths for GitHub Pages deployment..."
+        # Fix image paths in built HTML files
+        find dist -name "*.html" -exec sed -i 's|src="/images/|src="/web/images/|g' {} \;
+        find dist -name "*.html" -exec sed -i 's|href="/images/|href="/web/images/|g' {} \;
+        find dist -name "*.html" -exec sed -i 's|src="/css/|src="/web/css/|g' {} \;
+        find dist -name "*.html" -exec sed -i 's|href="/css/|href="/web/css/|g' {} \;
+        find dist -name "*.html" -exec sed -i 's|src="/js/|src="/web/js/|g' {} \;
+        find dist -name "*.html" -exec sed -i 's|href="/js/|href="/web/js/|g' {} \;
+        echo "Asset paths fixed for GitHub Pages"
         
     - name: Verify build output
       run: |
         ls -la dist/
         test -f dist/index.html
+        echo "Checking asset paths in built HTML..."
+        echo "Image paths:"
+        grep -o 'src="/web/images/[^"]*"' dist/index.html | head -5
+        echo "CSS paths:"
+        grep -o 'href="/web/css/[^"]*"' dist/index.html | head -5
+        echo "JS paths:"
+        grep -o 'src="/web/js/[^"]*"' dist/index.html | head -5
+        echo "Checking if public assets are copied..."
+        ls -la dist/images/ || echo "Images directory not found"
+        ls -la dist/css/ || echo "CSS directory not found"
+        ls -la dist/js/ || echo "JS directory not found"
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
