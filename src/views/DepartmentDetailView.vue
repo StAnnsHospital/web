@@ -186,11 +186,39 @@ import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import departmentsData from '@/data/departments.json'
 
+// TypeScript interfaces
+interface Brochure {
+  title: string
+  url: string
+}
+
+interface Department {
+  id: number
+  name: string
+  slug: string
+  description: string
+  icon: string
+  image: string
+  secondaryImage: string
+  doctors: any[]
+  services: string[]
+  brochures: Brochure[]
+  content: {
+    mainDescription: string
+    whyChoose: string
+    tabs: {
+      tab1: { title: string; content: string }
+      tab2: { title: string; content: string }
+      tab3: { title: string; content: string }
+    }
+  }
+}
+
 const route = useRoute()
-const departments = ref(departmentsData)
+const departments = ref(departmentsData as Department[])
 
 // Get department by name from route params or default to first department
-const department = ref(departments.value[0])
+const department = ref<Department>(departments.value[0])
 
 // Department-specific content - now comes from JSON
 const departmentContent = ref({
@@ -204,7 +232,7 @@ const departmentContent = ref({
 })
 
 // Function to set department-specific content from JSON
-const setDepartmentContent = (dept: any) => {
+const setDepartmentContent = (dept: Department) => {
   if (dept.content) {
     departmentContent.value = dept.content
   } else {
