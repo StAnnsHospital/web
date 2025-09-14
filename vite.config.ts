@@ -15,7 +15,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  base: '/', // GitHub Pages subdirectory deployment
+  base: process.env.NODE_ENV === 'production' ? '/web/' : '/', // GitHub Pages subdirectory deployment
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
