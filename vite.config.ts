@@ -15,7 +15,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  base: '/', // Change this to '/your-repo-name/' if deploying to GitHub Pages with a subdirectory
+  base: '/web/', // GitHub Pages subdirectory deployment
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
