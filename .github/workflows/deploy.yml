@@ -65,6 +65,10 @@ jobs:
         find dist -name "*.js" -exec sed -i 's|"/images/|"/web/images/|g' {} \;
         find dist -name "*.js" -exec sed -i 's|/images/|/web/images/|g' {} \;
         
+        # Fix double /web/web/ paths back to single /web/
+        find dist -name "*.js" -exec sed -i 's|/web/web/|/web/|g' {} \;
+        find dist -name "*.html" -exec sed -i 's|/web/web/|/web/|g' {} \;
+        
         echo "Asset paths fixed for GitHub Pages"
         
     - name: Verify build output
