@@ -17,9 +17,6 @@ export default defineConfig({
   },
   base: process.env.NODE_ENV === 'production' ? '/web/' : '/', // GitHub Pages subdirectory deployment
   publicDir: 'public',
-  define: {
-    __BASE_URL__: JSON.stringify(process.env.NODE_ENV === 'production' ? '/web/' : '/')
-  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
