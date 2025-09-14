@@ -1,0 +1,16 @@
+[
+  { "year": "1953", "description": "Foundation laid.", "icon": "flaticon-hospital" },
+  { "year": "1954", "description": "Inauguration of the first 2-floor building (12 rooms).", "icon": "flaticon-home-1" },
+  { "year": "1957", "description": "First extension for inpatients.", "icon": "flaticon-add" },
+  { "year": "1958", "description": "Operation theatre & pathology department opened.", "icon": "flaticon-surgery-room" },
+  { "year": "1960", "description": "Quarters built for residential doctor.", "icon": "flaticon-home" },
+  { "year": "1963", "description": "X-ray plant installed.", "icon": "flaticon-ultrasound" },
+  { "year": "1968", "description": "Fully equipped wards, laboratory, OT, pharmacy, and ambulance added.", "icon": "flaticon-first-aid" },
+  { "year": "1992–93", "description": "Major extension: pediatric ward, post-op ward, private rooms, abdominal scanner, laparoscope, new ambulance.", "icon": "flaticon-add-friend" },
+  { "year": "1995", "description": "Blood bank started.", "icon": "flaticon-heartbeat" },
+  { "year": "1998", "description": "School of Nursing established.", "icon": "flaticon-student" },
+  { "year": "2000", "description": "Neo-natal unit established.", "icon": "flaticon-hospital-bed" },
+  { "year": "2005", "description": "Cancer Block inaugurated with Theratron Cobalt Phoenix-60 machine.", "icon": "flaticon-lab" },
+  { "year": "2006", "description": "B.Sc. College of Nursing started (affiliated now to KNRUHS, Warangal).", "icon": "flaticon-open-book" },
+  { "year": "2021", "description": "LINAC installed for Radiation Therapy.", "icon": "flaticon-medical" }
+]

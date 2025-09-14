@@ -35,19 +35,18 @@
 
               <div class="content-box">
                 <div class="title-box">
-                  <h2 class="text-reveal-anim">Departments Of {{ department.name }}</h2>
+                  <h2 class="text-reveal-anim">{{ department.name }} Department</h2>
                   <span class="theme_color">{{ department.description }}</span>
                 </div>
-                <p>Resofus combines MR imaging and focused ultrasound into MR guided Focused Ultrasound technology, and provides a transcranial, non-invasive image-guided personalized treatment modality with no incisions and with no ionizing radiation.</p>
-                <p>This combination of continuous MR imaging and very highly focused acoustic sound waves provides the ability to provide pinpoint precision treatment at the planned target, without causing damage to any of the normal surrounding tissue. This precise local lesioning stops the improper transfer of electrical signals that induce the tremor, and it stops.</p>
+                <div v-html="departmentContent.mainDescription"></div>
                 
                 <!-- Two Column -->
                 <div class="two-column">
                   <div class="row">
                     <div class="image-column col-xl-6 col-lg-12 col-md-12">
                       <figure class="image">
-                        <a href="/images/resource/post-img.jpg" class="lightbox-image">
-                          <img src="/images/resource/post-img.jpg" alt="">
+                        <a :href="department.secondaryImage" class="lightbox-image">
+                          <img :src="department.secondaryImage" :alt="department.name">
                         </a>
                       </figure>
                     </div>
@@ -60,8 +59,8 @@
                   </div>
                 </div>
 
-                <h3>Why Choose This Service</h3>
-                <p>Complete account of the systems and expound the actually teachings of the great explorer of the truth, the master-builder of human uts happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful anyone who loves or pursues.</p>
+                <h3>Why Choose Our {{ department.name }} Department</h3>
+                <div v-html="departmentContent.whyChoose"></div>
 
                 <!--Product Info Tabs-->
                 <div class="product-info-tabs">
@@ -69,32 +68,26 @@
                   <div class="prod-tabs tabs-box">
                     <!--Tab Btns-->
                     <ul class="tab-btns tab-buttons clearfix">
-                      <li data-tab="#prod-details" class="tab-btn active-btn">Precautions</li>
-                      <li data-tab="#prod-spec" class="tab-btn">Intelligence</li>
-                      <li data-tab="#prod-reviews" class="tab-btn">Specializations</li>
+                      <li data-tab="#prod-details" class="tab-btn active-btn">{{ departmentContent.tabs.tab1.title }}</li>
+                      <li data-tab="#prod-spec" class="tab-btn">{{ departmentContent.tabs.tab2.title }}</li>
+                      <li data-tab="#prod-reviews" class="tab-btn">{{ departmentContent.tabs.tab3.title }}</li>
                     </ul>
                     
                     <!--Tabs Container-->
                     <div class="tabs-content">
                       <!--Tab / Active Tab-->
                       <div class="tab active-tab" id="prod-details">
-                        <div class="content">
-                          <p>Suspendisse laoreet at nulla id auctor. Maecenas in dui cursus, lacinia nisl non, blandit lorem. Aliquam vel risus hendrerit, faucibus nisl a, porta sapien. Etiam iaculis mattis quam, nec iaculis velit feugiat quis. Pellentesque sed feugiat dui, ac euismod leo.</p>
-                        </div>
+                        <div class="content" v-html="departmentContent.tabs.tab1.content"></div>
                       </div>
                       
                       <!--Tab -->
                       <div class="tab" id="prod-spec">
-                        <div class="content">
-                          <p>Suspendisse laoreet at nulla id auctor. Maecenas in dui cursus, lacinia nisl non, blandit lorem. Aliquam vel risus hendrerit, faucibus nisl a, porta sapien. Etiam iaculis mattis quam, nec iaculis velit feugiat quis. Pellentesque sed feugiat dui, ac euismod leo.</p>
-                        </div>
+                        <div class="content" v-html="departmentContent.tabs.tab2.content"></div>
                       </div>
                       
                       <!--Tab-->
                       <div class="tab" id="prod-reviews">
-                        <div class="content">
-                          <p>Suspendisse laoreet at nulla id auctor. Maecenas in dui cursus, lacinia nisl non, blandit lorem. Aliquam vel risus hendrerit, faucibus nisl a, porta sapien. Etiam iaculis mattis quam, nec iaculis velit feugiat quis. Pellentesque sed feugiat dui, ac euismod leo.</p>
-                        </div>
+                        <div class="content" v-html="departmentContent.tabs.tab3.content"></div>
                       </div>  
                     </div>
                   </div>
@@ -120,25 +113,25 @@
               </div>
               
               <!--Brochures Box-->
-              <div class="brochures-box">
+              <div v-if="department.brochures && department.brochures.length > 0" class="brochures-box">
                 <div class="inner">
                   <h4>Download Brochures</h4>
-                  <div class="text">Etiam tortor lorem, auctor ut orci ut, vehicula ultricies mauris. scelerisque gravida.</div>
-                  <a class="theme-btn btn-style-one" href="#">
-                    <span class="btn-title"><i class="fa fa-file-pdf"></i> Info Company</span>
-                  </a>
-                  <a class="theme-btn btn-style-one" href="#">
-                    <span class="btn-title"><i class="fa fa-file-pdf"></i> Brochure Newest</span>
+                  <div class="text">Download our comprehensive guides and information about {{ department.name }} services.</div>
+                  <a v-for="brochure in department.brochures" :key="brochure.title" 
+                     class="theme-btn btn-style-one" 
+                     :href="brochure.url" 
+                     target="_blank">
+                    <span class="btn-title"><i class="fa fa-file-pdf"></i> {{ brochure.title }}</span>
                   </a>
                 </div>
               </div>
 
               <div class="help-box">
                 <span>Quick Contact</span>
-                <h4>Get Solution</h4>
-                <p>Contact us at the Medicoz office nearest to you or submit a business inquiry online.</p>
+                <h4>Need Help?</h4>
+                <p>Have questions about {{ department.name }} services? Contact our team for personalized assistance and expert guidance.</p>
                 <router-link to="/contact" class="theme-btn btn-style-one">
-                  <span class="btn-title">Contact</span>
+                  <span class="btn-title">Contact Us</span>
                 </router-link>
               </div>
             </aside>
@@ -199,6 +192,35 @@ const departments = ref(departmentsData)
 // Get department by name from route params or default to first department
 const department = ref(departments.value[0])
 
+// Department-specific content - now comes from JSON
+const departmentContent = ref({
+  mainDescription: '',
+  whyChoose: '',
+  tabs: {
+    tab1: { title: '', content: '' },
+    tab2: { title: '', content: '' },
+    tab3: { title: '', content: '' }
+  }
+})
+
+// Function to set department-specific content from JSON
+const setDepartmentContent = (dept: any) => {
+  if (dept.content) {
+    departmentContent.value = dept.content
+  } else {
+    // Fallback content if no content is defined in JSON
+    departmentContent.value = {
+      mainDescription: `<p>Our ${dept.name} Department provides comprehensive medical services with state-of-the-art facilities and experienced healthcare professionals.</p>`,
+      whyChoose: `<p>Our ${dept.name} Department offers advanced medical care with experienced specialists and modern technology.</p>`,
+      tabs: {
+        tab1: { title: 'Services', content: `<p>Our ${dept.name} services include comprehensive medical care.</p>` },
+        tab2: { title: 'Treatment', content: `<p>We provide advanced treatment options for ${dept.name} conditions.</p>` },
+        tab3: { title: 'Specializations', content: `<p>Our ${dept.name} specialists focus on various medical conditions.</p>` }
+      }
+    }
+  }
+}
+
 // Function to find and set department based on route
 const setDepartmentFromRoute = () => {
   let departmentName = route.params.name as string
@@ -217,6 +239,7 @@ const setDepartmentFromRoute = () => {
     
     if (foundDepartment) {
       department.value = foundDepartment
+      setDepartmentContent(foundDepartment)
     }
   }
 }
@@ -236,6 +259,11 @@ watch(() => route.path, () => {
 
 onMounted(() => {
   setDepartmentFromRoute()
+  
+  // Set initial content if no department found
+  if (!department.value || department.value.id === departments.value[0].id) {
+    setDepartmentContent(departments.value[0])
+  }
 
   // Initialize interactive components
   if (typeof window !== 'undefined' && (window as any).$) {

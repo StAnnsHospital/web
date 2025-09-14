@@ -23,15 +23,17 @@
     <section class="map-section">
       <div class="auto-container">
         <div class="map-outer">
-          <div class="map-canvas"
-              data-zoom="12"
-              data-lat="-37.817085"
-              data-lng="144.955631"
-              data-type="roadmap"
-              data-hue="#ffc400"
-              data-title="Envato"
-              data-icon-path="/images/icons/map-marker.png"
-              data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
+          <div class="map-canvas">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d948.7378978586102!2d79.52546334091286!3d17.980989050548853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334fb76081f5e7%3A0xda34642eb6a616e9!2sSaint%20Anns%20Hospital!5e0!3m2!1sen!2sus!4v1757818939861!5m2!1sen!2sus" 
+              width="100%" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="St. Ann's Hospital Location">
+            </iframe>
           </div>
         </div>
       </div>
@@ -62,8 +64,12 @@
               <div class="inner">
                 <span class="icon flaticon-phone"></span> 
                 <h4><strong>Phone</strong></h4>
-                <p><a :href="`tel:${siteConfig.contact.phone}`">{{ siteConfig.contact.phone }}</a></p>
-                <p><a :href="`tel:${siteConfig.contact.emergency}`">{{ siteConfig.contact.emergency }}</a></p>
+                <template v-if="Array.isArray(siteConfig.contact.phones)">
+                  <p v-for="p in siteConfig.contact.phones" :key="p"><a :href="`tel:${p.replace(/\s+/g,'')}`">{{ p }}</a></p>
+                </template>
+                <template v-else>
+                  <p><a :href="`tel:${(siteConfig.contact.primaryPhone||'').replace(/\s+/g,'')}`">{{ siteConfig.contact.primaryPhone }}</a></p>
+                </template>
               </div>
             </div>
 
@@ -72,100 +78,62 @@
                 <span class="icon flaticon-email"></span> 
                 <h4><strong>Email</strong></h4>
                 <p><a :href="`mailto:${siteConfig.contact.email}`">{{ siteConfig.contact.email }}</a></p>
-                <p><a :href="`mailto:${siteConfig.contact.email}`">{{ siteConfig.contact.email }}</a></p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Form box -->
+        <!-- Google Form box -->
         <div class="form-box">
-          <div class="contact-form">
-            <form @submit.prevent="submitForm" id="email-form">
-              <div class="row">
-                <div class="form-group col-lg-12">
-                  <div class="response"></div>
-                </div>
-
-                <div class="col-lg-6 col-md-12">
-                  <div class="form-group">
-                    <input type="text" v-model="form.name" class="username" placeholder="Full Name *" required>
-                  </div>
-
-                  <div class="form-group">
-                    <input type="email" v-model="form.email" class="email" placeholder="Email Address *" required>
-                  </div>
-
-                  <div class="form-group">
-                    <input type="text" v-model="form.phone" class="username" placeholder="Your Phone">
-                  </div>
-                </div>
-                
-                <div class="col-lg-6 col-md-12">
-                  <div class="form-group">
-                    <textarea v-model="form.message" class="message" placeholder="Message" required></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group col-lg-12 text-center pt-3">
-                  <button class="theme-btn btn-style-one" type="submit" :disabled="isSubmitting">
-                    <span class="btn-title">{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
-                  </button>
-                </div>
-              </div>
-            </form>
+          <div class="google-form-container">
+            <iframe 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdRkJG2Bv1H8h9vc5MrFkrrAQKCD91H2ic9TocEOvQ_YM5TOQ/viewform?embedded=true" 
+              width="100%" 
+              height="600" 
+              frameborder="0" 
+              marginheight="0" 
+              marginwidth="0"
+              title="Contact Form">
+              Loading…
+            </iframe>
           </div>
         </div>
       </div>
     </section>
     <!--End Contact Section -->
 
-    <ClientSlider />
     <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted } from 'vue'
+import { ref } from 'vue'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
-import ClientSlider from '@/components/common/ClientSlider.vue'
 import siteConfigData from '@/data/site-config.json'
 
 const siteConfig = ref(siteConfigData)
-const isSubmitting = ref(false)
+</script>
 
-const form = reactive({
-  name: '',
-  email: '',
-  phone: '',
-  message: ''
-})
+<style scoped>
+.google-form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-const submitForm = async () => {
-  isSubmitting.value = true
-  
-  try {
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', form)
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    // Reset form
-    Object.assign(form, {
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    })
-    
-    alert('Message sent successfully!')
-  } catch (error) {
-    console.error('Error sending message:', error)
-    alert('Error sending message. Please try again.')
-  } finally {
-    isSubmitting.value = false
+.google-form-container iframe {
+  display: block;
+  border: none;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .google-form-container iframe {
+    height: 500px;
   }
 }
-</script>
+</style>

@@ -24,7 +24,7 @@
           <div class="content-column col-lg-6 col-md-12 col-sm-12 order-lg-2">
             <div class="inner-column">
               <div class="sec-title">
-                <span class="sub-title">ST. ANN’S HOSPITAL, FATHIMANAGAR</span>
+                <span class="sub-title">ST. ANN'S MULTI-SPECIALTY HOSPITAL, FATHIMANAGAR</span>
                 <h2 class="text-reveal-anim">72 Years of Care.<br>Future of Multispecialty <br> Excellence in Clinical Care.</h2>
                 <span class="divider"></span>
                 <p>Founded in 1954 with a modest 12-room building, St. Ann’s has grown—through faith, sacrifice, and service—into a 200-bed multispecialty hospital trusted by families across Warangal and beyond. Our mission remains simple and steadfast: provide dignified, affordable, and compassionate care to every person, especially the poor and underserved.</p>
@@ -92,117 +92,18 @@
     </section>
     <!-- End Team Section -->
 
-    <!-- Appointment Section -->
-    <section class="appointment-section">
-      <div class="image-layer" style="background-image: url(/images/background/2.jpg);"></div>
-      <div class="auto-container">
-        <div class="row">
-          <!-- Content Column -->
-          <div class="content-column col-lg-6 col-md-12 col-sm-12">
-            <div class="inner-column">
-              <span class="title">Need a Doctor for Check-up?</span>
-              <h2 class="text-reveal-anim">Just Make an Appointment <br>and You're Done!</h2>
-              <div class="number">Get Your Quote or Call: <strong>{{ siteConfig.contact.emergency }}</strong></div>
-              <router-link to="/appointment" class="theme-btn btn-style-three">
-                <span class="btn-title">Get an Appointment</span>
-              </router-link>
-            </div>
-          </div>
-          <div class="image-column col-lg-6 col-md-12 col-sm-12">
-            <figure class="image"><img src="/images/resource/image-4.png" alt=""></figure>
-          </div>
-        </div>
-
-        <div class="fun-fact-section">
-          <div class="row">
-            <!--Column-->
-            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-              <div class="count-box">
-                <div class="icon-box"><span class="icon flaticon-user-experience"></span></div>
-                <h4 class="counter-title">Years of Experience</h4>
-                <span class="count-text" data-speed="3000" data-stop="25">0</span>
-              </div>
-            </div>
-
-            <!--Column-->
-            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-              <div class="count-box">
-                <div class="icon-box"><span class="icon flaticon-team"></span></div>
-                <h4 class="counter-title">Medical Specialties</h4>
-                <span class="count-text" data-speed="3000" data-stop="470">0</span>
-              </div>
-            </div>
-
-            <!--Column-->
-            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-              <div class="count-box">
-                <div class="icon-box"><span class="icon flaticon-hospital"></span></div>
-                <h4 class="counter-title">Medical Specialties</h4>
-                <span class="count-text" data-speed="3000" data-stop="689">0</span>
-              </div>
-            </div>
-
-            <!--Column-->
-            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-              <div class="count-box">
-                <div class="icon-box"><span class="icon flaticon-add-friend"></span></div>
-                <h4 class="counter-title">Happy Patients</h4>
-                <span class="count-text" data-speed="3000" data-stop="9036">0</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Appointment Section -->
+    <AppointmentSection />
 
     <TestimonialSlider />
 
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-      <div class="auto-container">
-        <div class="sec-title text-center">
-          <span class="sub-title">Our Pricing</span>
-          <h2 class="text-reveal-anim">Pricing Plan</h2>
-          <span class="divider"></span>
-        </div>
 
-        <div class="outer-box">
-          <div class="row">
-            <PricingCard v-for="plan in pricingPlans" :key="plan.id" :plan="plan" />
-          </div>
-        </div>
-
-        <div class="sec-bottom-text">Don't hesitate, contact us for better help and services <a href="#">Explore all Dr. Team</a></div>
-      </div>
-    </section>
-    <!--End Pricing Section -->
-
-    <!-- News Section -->
-    <section class="news-section">
-      <div class="auto-container">
-        <!-- Sec Title -->
-        <div class="sec-title text-center">
-          <span class="title">OUR BLOG</span>
-          <h2 class="text-reveal-anim">Recent Articles and News</h2>
-          <span class="divider"></span>
-        </div>
-
-        <div class="row">
-          <NewsCard v-for="article in recentNews" :key="article.id" :article="article" />
-        </div>
-      </div>
-    </section>
-    <!--End News Section -->
-
-    <ClientSlider />
 
     <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import HeroSlider from '@/components/common/HeroSlider.vue'
@@ -210,26 +111,17 @@ import FeatureBlock from '@/components/common/FeatureBlock.vue'
 import ServiceBlock from '@/components/common/ServiceBlock.vue'
 import DoctorCard from '@/components/common/DoctorCard.vue'
 import TestimonialSlider from '@/components/common/TestimonialSlider.vue'
-import PricingCard from '@/components/common/PricingCard.vue'
-import NewsCard from '@/components/common/NewsCard.vue'
-import ClientSlider from '@/components/common/ClientSlider.vue'
+import AppointmentSection from '@/components/common/AppointmentSection.vue'
 
 import siteConfigData from '@/data/site-config.json'
 import featuresData from '@/data/features.json'
 import servicesData from '@/data/services.json'
 import doctorsData from '@/data/doctors.json'
-import pricingData from '@/data/pricing.json'
-import newsData from '@/data/news.json'
 
 const siteConfig = ref(siteConfigData)
 const features = ref(featuresData)
 const services = ref(servicesData)
 const doctors = ref(doctorsData)
-const pricingPlans = ref(pricingData)
-const news = ref(newsData)
-
-// Limit to first 3 articles for home page
-const recentNews = computed(() => news.value.slice(0, 3))
 
 onMounted(() => {
   // Initialize interactive components

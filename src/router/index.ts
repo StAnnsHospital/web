@@ -50,18 +50,13 @@ const router = createRouter({
     },
     // Specific department routes
     {
-      path: '/cardiology',
-      name: 'cardiology',
+      path: '/oncology',
+      name: 'oncology',
       component: () => import('../views/DepartmentDetailView.vue'),
     },
     {
       path: '/neurology',
       name: 'neurology',
-      component: () => import('../views/DepartmentDetailView.vue'),
-    },
-    {
-      path: '/urology',
-      name: 'urology',
       component: () => import('../views/DepartmentDetailView.vue'),
     },
     {
@@ -79,20 +74,30 @@ const router = createRouter({
       name: 'laboratory',
       component: () => import('../views/DepartmentDetailView.vue'),
     },
+    {
+      path: '/orthopedic',
+      name: 'orthopedic',
+      component: () => import('../views/DepartmentDetailView.vue'),
+    },
+    {
+      path: '/physiotherapy',
+      name: 'physiotherapy',
+      component: () => import('../views/DepartmentDetailView.vue'),
+    },
+    {
+      path: '/palliative-care',
+      name: 'palliative-care',
+      component: () => import('../views/DepartmentDetailView.vue'),
+    },
     // Department routes with /departments/ prefix
     {
-      path: '/departments/cardiology',
-      name: 'departments-cardiology',
+      path: '/departments/oncology',
+      name: 'departments-oncology',
       component: () => import('../views/DepartmentDetailView.vue'),
     },
     {
       path: '/departments/neurology',
       name: 'departments-neurology',
-      component: () => import('../views/DepartmentDetailView.vue'),
-    },
-    {
-      path: '/departments/urology',
-      name: 'departments-urology',
       component: () => import('../views/DepartmentDetailView.vue'),
     },
     {
@@ -111,6 +116,21 @@ const router = createRouter({
       component: () => import('../views/DepartmentDetailView.vue'),
     },
     {
+      path: '/departments/orthopedic',
+      name: 'departments-orthopedic',
+      component: () => import('../views/DepartmentDetailView.vue'),
+    },
+    {
+      path: '/departments/physiotherapy',
+      name: 'departments-physiotherapy',
+      component: () => import('../views/DepartmentDetailView.vue'),
+    },
+    {
+      path: '/departments/palliative-care',
+      name: 'departments-palliative-care',
+      component: () => import('../views/DepartmentDetailView.vue'),
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
@@ -121,86 +141,9 @@ const router = createRouter({
       component: () => import('../views/AppointmentView.vue'),
     },
     {
-      path: '/blog',
-      name: 'blog',
-      component: () => import('../views/BlogStandardView.vue'),
-    },
-    {
-      path: '/blog/:id',
-      name: 'blog-post',
-      component: () => import('../views/BlogPostView.vue'),
-    },
-    // Blog variations
-    {
-      path: '/blog/checkerboard',
-      name: 'blog-checkerboard',
-      component: () => import('../views/BlogCheckerboardView.vue'),
-    },
-    {
-      path: '/blog/masonry',
-      name: 'blog-masonry',
-      component: () => import('../views/BlogMasonryView.vue'),
-    },
-    {
-      path: '/blog/two-col',
-      name: 'blog-two-col',
-      component: () => import('../views/BlogTwoColView.vue'),
-    },
-    {
-      path: '/blog/three-col',
-      name: 'blog-three-col',
-      component: () => import('../views/BlogThreeColView.vue'),
-    },
-    {
-      path: '/blog/four-col',
-      name: 'blog-four-col',
-      component: () => import('../views/BlogFourColWideView.vue'),
-    },
-    {
-      path: '/blog/four-col-wide',
-      name: 'blog-four-col-wide',
-      component: () => import('../views/BlogFourColWideView.vue'),
-    },
-    // Blog post types
-    {
-      path: '/blog/post/image',
-      name: 'blog-post-image',
-      component: () => import('../views/BlogPostView.vue'),
-    },
-    {
-      path: '/blog/post/gallery',
-      name: 'blog-post-gallery',
-      component: () => import('../views/BlogPostGalleryView.vue'),
-    },
-    {
-      path: '/blog/post/link',
-      name: 'blog-post-link',
-      component: () => import('../views/BlogPostLinkView.vue'),
-    },
-    {
-      path: '/blog/post/audio',
-      name: 'blog-post-audio',
-      component: () => import('../views/BlogPostAudioView.vue'),
-    },
-    {
-      path: '/blog/post/quote',
-      name: 'blog-post-quote',
-      component: () => import('../views/BlogPostQuoteView.vue'),
-    },
-    {
-      path: '/blog/post/video',
-      name: 'blog-post-video',
-      component: () => import('../views/BlogPostVideoView.vue'),
-    },
-    {
       path: '/gallery',
       name: 'gallery',
       component: () => import('../views/GalleryView.vue'),
-    },
-    {
-      path: '/pricing',
-      name: 'pricing',
-      component: () => import('../views/PricingView.vue'),
     },
     {
       path: '/login',
@@ -208,29 +151,9 @@ const router = createRouter({
       component: () => import('../views/LoginView.vue'),
     },
     {
-      path: '/elements',
-      name: 'elements',
-      component: () => import('../views/ElementsView.vue'),
-    },
-    {
-      path: '/coming-soon',
-      name: 'coming-soon',
-      component: () => import('../views/ComingSoonView.vue'),
-    },
-    {
-      path: '/terms',
-      name: 'terms',
-      component: () => import('../views/TermsView.vue'),
-    },
-    {
-      path: '/error',
-      name: 'error',
-      component: () => import('../views/ErrorPageView.vue'),
-    },
-    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
-      component: () => import('../views/ErrorPageView.vue'),
+      redirect: '/',
     },
   ],
 })

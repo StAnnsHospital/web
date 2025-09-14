@@ -1,6 +1,6 @@
-# St. Ann's Hospital - Vue.js SPA
+# St. Ann's Multi-Specialty Hospital - Vue.js SPA
 
-This is a modern Vue.js Single Page Application (SPA) version of the St. Ann's Hospital website, built with Vue 3, Vite, and TypeScript.
+This is a modern Vue.js Single Page Application (SPA) version of the St. Ann's Multi-Specialty Hospital website, built with Vue 3, Vite, and TypeScript.
 
 ## Features
 
@@ -150,7 +150,7 @@ The project uses the original CSS files from the HTML template. To customize:
 
 ## License
 
-This project is for St. Ann's Hospital. All rights reserved.
+This project is for St. Ann's Multi-Specialty Hospital. All rights reserved.
 
 ## Support
 

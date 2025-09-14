@@ -17,7 +17,7 @@
                   </div>
                   <div class="text">
                     <p>{{ siteConfig.site.description }}</p>
-                    <p>We are among the most qualified implant providers in the AUS with over 30 years of quality training and experience.</p>
+                    <p>We’re a 200-bed multispecialty center with 24×7 Emergency, ICU/NICU, a LINAC-equipped Cancer Block, and a School & College of Nursing.</p>
                   </div>
                   <ul class="social-icon-three">
                     <li><a :href="siteConfig.social.facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -48,23 +48,14 @@
             <div class="row">
               <!--Footer Column-->
               <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                <!--Footer Column-->
-                <div class="footer-widget recent-posts">
-                  <h2 class="widget-title">Latest News</h2>
-                  <!--Footer Column-->
-                  <div class="widget-content">
-                    <div v-for="article in latestNews" :key="article.id" class="post">
-                      <div class="thumb">
-                        <router-link :to="`/blog/${article.id}`">
-                          <img :src="article.image" :alt="article.title">
-                        </router-link>
-                      </div>
-                      <h4>
-                        <router-link :to="`/blog/${article.id}`">{{ article.title }}</router-link>
-                      </h4>
-                      <span class="date">{{ article.date }}</span>
-                    </div>
-                  </div>
+                <div class="footer-widget services-widget">
+                  <h2 class="widget-title">Our Services</h2>
+                  <ul class="service-list">
+                    <li v-for="s in servicesLimited" :key="s.id">
+                      <span class="icon" :class="s.icon" aria-hidden="true"></span>
+                      <span class="service-text">{{ s.title }}</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -84,7 +75,16 @@
                       <li>
                         <span class="icon flaticon-call-1"></span>
                         <div class="text">Mon to Fri : 08:30 - 18:00</div>
-                        <a :href="`tel:${siteConfig.contact.phone}`"><strong>{{ siteConfig.contact.phone }}</strong></a>
+                        <div class="phones">
+                          <template v-if="Array.isArray(siteConfig.contact.phones)">
+                            <div v-for="p in siteConfig.contact.phones" :key="p">
+                              <a :href="`tel:${p.replace(/\s+/g,'')}`"><strong>{{ p }}</strong></a>
+                            </div>
+                          </template>
+                          <template v-else>
+                            <a :href="`tel:${(siteConfig.contact.primaryPhone||'').replace(/\s+/g,'')}`"><strong>{{ siteConfig.contact.primaryPhone }}</strong></a>
+                          </template>
+                        </div>
                       </li>
 
                       <li>
@@ -135,13 +135,21 @@
 import { ref, computed } from 'vue'
 import siteConfigData from '@/data/site-config.json'
 import departmentsData from '@/data/departments.json'
-import newsData from '@/data/news.json'
+import servicesData from '@/data/services.json'
 
 const siteConfig = ref(siteConfigData)
 const departments = ref(departmentsData)
-const news = ref(newsData)
-
-const latestNews = computed(() => {
-  return news.value.slice(0, 3)
-})
+const services = ref(servicesData)
+// show up to 5 services in footer
+const servicesLimited = computed(() => services.value.slice(0,5))
 </script>
+
+<style scoped>
+.services-widget .service-list { list-style:none; margin:0; padding:0; }
+.services-widget .service-list li { display:flex; align-items:flex-start; gap:10px; margin:0 0 14px; line-height:1.3; }
+.services-widget .service-list li .icon { font-size:20px; color:#ffffff; line-height:1; position:relative; top:2px; }
+.services-widget .service-list li .service-text { font-size:14px; font-weight:500; color:#d5dde2; }
+.services-widget .service-list li:last-child { margin-bottom:0; }
+.contact-widget .phones { display:flex; flex-direction:column; gap:2px; margin-top:4px; }
+.contact-widget .phones a { color:#ffffff; font-weight:600; font-size:14px; }
+</style>

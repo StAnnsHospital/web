@@ -32,7 +32,6 @@
     <!--End Team Section -->
 
     <TestimonialSlider />
-    <ClientSlider />
     <AppFooter />
   </div>
 </template>
@@ -43,7 +42,6 @@ import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import DoctorCardTwo from '@/components/common/DoctorCardTwo.vue'
 import TestimonialSlider from '@/components/common/TestimonialSlider.vue'
-import ClientSlider from '@/components/common/ClientSlider.vue'
 import doctorsData from '@/data/doctors.json'
 
 const doctors = ref(doctorsData)

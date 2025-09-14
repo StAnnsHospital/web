@@ -29,70 +29,9 @@
     </section>
     <!--End Services Section -->
     
-    <!-- Appointment Section -->
-    <section class="appointment-section alternate">
-      <div class="image-layer" style="background-image: url(/images/background/2.jpg);"></div>
-      <div class="auto-container">
-        <div class="row">
-          <!-- Content Column -->
-          <div class="content-column col-lg-6 col-md-12 col-sm-12">
-            <div class="inner-column">
-              <span class="title">Need a Doctor for Check-up?</span>
-              <h2 class="text-reveal-anim">Just Make an Appointment <br>and You're Done!</h2>
-              <div class="number">Get Your Quote or Call: <strong>(0080) 123-453-789</strong></div>
-              <a href="#" class="theme-btn btn-style-three"><span class="btn-title">Get an Appointment</span></a>
-            </div>
-          </div>
-          <div class="image-column col-lg-6 col-md-12 col-sm-12">
-            <figure class="image"><img src="/images/resource/image-4.png" alt=""></figure>
-          </div>
-        </div>
-
-        <div class="fun-fact-section">
-          <div class="row">
-            <!--Column-->
-            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-              <div class="count-box">
-                <div class="icon-box"><span class="icon flaticon-user-experience"></span></div>
-                <h4 class="counter-title">Years of Experience</h4>
-                <span class="count-text" data-speed="3000" data-stop="25">0</span>
-              </div>
-            </div>
-
-            <!--Column-->
-            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-              <div class="count-box">
-                <div class="icon-box"><span class="icon flaticon-team"></span></div>
-                <h4 class="counter-title">Medical Specialties</h4>
-                <span class="count-text" data-speed="3000" data-stop="470">0</span>
-              </div>
-            </div>
-
-            <!--Column-->
-            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-              <div class="count-box">
-                <div class="icon-box"><span class="icon flaticon-hospital"></span></div>
-                <h4 class="counter-title">Medical Specialties</h4>
-                <span class="count-text" data-speed="3000" data-stop="689">0</span>
-              </div>
-            </div>
-
-            <!--Column-->
-            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-              <div class="count-box">
-                <div class="icon-box"><span class="icon flaticon-add-friend"></span></div>
-                <h4 class="counter-title">Happy Patients</h4>
-                <span class="count-text" data-speed="3000" data-stop="9036">0</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Appointment Section -->
+    <AppointmentSection />
 
     <TestimonialSlider />
-    <ClientSlider />
     <AppFooter />
   </div>
 </template>
@@ -103,7 +42,7 @@ import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import ServiceBlock from '@/components/common/ServiceBlock.vue'
 import TestimonialSlider from '@/components/common/TestimonialSlider.vue'
-import ClientSlider from '@/components/common/ClientSlider.vue'
+import AppointmentSection from '@/components/common/AppointmentSection.vue'
 import servicesData from '@/data/services.json'
 
 const services = ref(servicesData)

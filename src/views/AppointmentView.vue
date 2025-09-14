@@ -16,108 +16,79 @@
     </section>
     <!--End Page Title-->
 
-    <div class="auto-container">
-      <div class="contact-form-two">
-        <div class="title-box">
-          <h4>Make an Appointment</h4>
-          <div class="text">We provide the most full medical services, so every person could have the opportunity to receive qualitative medical help.</div>
-        </div>
-        <form @submit.prevent="submitAppointment" id="contact-form">
-          <div class="row clearfix">
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-              <input type="text" v-model="form.name" placeholder="Your Name" required>
-            </div>
-            
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-              <input type="text" v-model="form.phone" placeholder="Your Phone" required>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-              <input type="email" v-model="form.email" placeholder="Email Address" required>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-              <select v-model="form.department" required>
-                <option value="" selected disabled>Select Departments</option>
-                <option v-for="dept in departments" :key="dept.id" :value="dept.name">{{ dept.name }}</option>
-              </select>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-              <input type="date" v-model="form.date" placeholder="Select Date" required>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-              <select v-model="form.time" required>
-                <option value="" selected disabled>Select Time</option>
-                <option value="10:00AM - 12:00AM">10:00AM - 12:00AM</option>
-                <option value="12:00AM - 02:00AM">12:00AM - 02:00AM</option>
-                <option value="02:00PM - 04:00PM">02:00PM - 04:00PM</option>
-                <option value="04:00PM - 06:00PM">04:00PM - 06:00PM</option>
-                <option value="06:00PM - 08:00PM">06:00PM - 08:00PM</option>
-              </select>
-            </div>
-            
-            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-              <textarea v-model="form.message" placeholder="Message" required></textarea>
-            </div>
-            
-            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-              <button class="theme-btn btn-style-three small" type="submit" :disabled="isSubmitting">
-                <span class="btn-title">{{ isSubmitting ? 'Submitting...' : 'Submit Now' }}</span>
-              </button>
+    <!-- Appointment Form Section -->
+    <section class="appointment-section">
+      <div class="auto-container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="google-form-wrapper">
+              <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfNtYt6uySLNiXqK6MXtqPl-F2AdK_G_3-WecnpcR1-DyKfTQ/viewform?embedded=true" 
+                width="100%" 
+                height="1634" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0"
+                title="Appointment Form"
+                loading="lazy">
+                Loading…
+              </iframe>
             </div>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
+    </section>
+    <!-- End Appointment Form Section -->
 
     <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
-import departmentsData from '@/data/departments.json'
+</script>
 
-const departments = ref(departmentsData)
-const isSubmitting = ref(false)
+<style scoped>
+.appointment-section {
+  padding: 80px 0;
+}
 
-const form = reactive({
-  name: '',
-  phone: '',
-  email: '',
-  department: '',
-  date: '',
-  time: '',
-  message: ''
-})
+.google-form-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
 
-const submitAppointment = async () => {
-  isSubmitting.value = true
+.google-form-wrapper iframe {
+  width: 100%;
+  height: 1634px;
+  border: none;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .appointment-section {
+    padding: 60px 0;
+  }
   
-  try {
-    console.log('Appointment submitted:', form)
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    Object.assign(form, {
-      name: '',
-      phone: '',
-      email: '',
-      department: '',
-      date: '',
-      time: '',
-      message: ''
-    })
-    
-    alert('Appointment request submitted successfully!')
-  } catch (error) {
-    console.error('Error submitting appointment:', error)
-    alert('Error submitting appointment. Please try again.')
-  } finally {
-    isSubmitting.value = false
+  .google-form-wrapper iframe {
+    height: 1400px;
   }
 }
-</script>
+
+@media (max-width: 480px) {
+  .appointment-section {
+    padding: 40px 0;
+  }
+  
+  .google-form-wrapper iframe {
+    height: 1200px;
+  }
+}
+</style>

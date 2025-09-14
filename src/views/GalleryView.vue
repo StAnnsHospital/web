@@ -66,7 +66,6 @@
       </div>
     </section>
 
-    <ClientSlider />
     <AppFooter />
   </div>
 </template>
@@ -75,7 +74,6 @@
 import { onMounted, ref, computed } from 'vue'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
-import ClientSlider from '@/components/common/ClientSlider.vue'
 import rawItems from '@/data/galleryItems.json'
 
 // Allow vendor globals used by legacy scripts to be accessed safely from TS

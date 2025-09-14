@@ -1,1 +1,0 @@
-const s="/images/resource/instagram-1.jpg",a="/images/resource/instagram-2.jpg",r="/images/resource/instagram-3.jpg",e="/images/resource/instagram-4.jpg",o="/images/resource/instagram-5.jpg",t="/images/resource/instagram-6.jpg";export{s as _,a,r as b,e as c,o as d,t as e};

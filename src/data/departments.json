@@ -1,62 +1,242 @@
 [
   {
     "id": 1,
-    "name": "Cardiology",
-    "slug": "cardiology",
-    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
+    "name": "Oncology",
+    "slug": "oncology",
+    "description": "Comprehensive cancer care and treatment services. Our oncology department provides advanced diagnostic and therapeutic services for various types of cancer.",
     "icon": "flaticon-heart-2",
-    "image": "/images/resource/service-1.jpg",
-    "doctors": ["Dr. Morila Wood"],
-    "services": ["Heart Checkup", "ECG", "Echocardiogram"]
+    "image": "/images/resource/service-1-full.png",
+    "secondaryImage": "/images/resource/service-1.jpg",
+    "doctors": [],
+    "services": ["Cancer Screening", "Chemotherapy", "Radiation Therapy", "Oncology Consultation"],
+    "brochures": [],
+    "content": {
+      "mainDescription": "<p>Our <strong>Surgical, Medical, and Radiation Oncology</strong> departments are led by proficient and experienced doctors who offer <strong>personalized and compassionate care</strong>. The <strong>Radiation Therapy Unit</strong> is equipped with a <strong>state-of-the-art Linear Accelerator</strong> to ensure precision treatment.</p><p>A newly inaugurated <strong>Platinum Jubilee Block (70 years)</strong> features <strong>modern, multi-specialty facilities</strong> designed to serve a wider range of healthcare needs.</p><p><strong>AROGYASREE SCHEME IS APPLICABLE FOR CANCER TREATMENT</strong></p>",
+      "whyChoose": "<p>Our Oncology Department stands out for its comprehensive approach to cancer care, advanced treatment options, and compassionate patient support. We offer cutting-edge therapies, clinical trials, and a multidisciplinary team approach that ensures each patient receives personalized, evidence-based care.</p>",
+      "tabs": {
+        "tab1": {
+          "title": "Treatment Options",
+          "content": "<p>We offer a full range of cancer treatment options including:</p><ul><li>Chemotherapy and targeted therapy</li><li>Radiation therapy with advanced techniques</li><li>Surgical oncology procedures</li><li>Immunotherapy and precision medicine</li><li>Clinical trials and experimental treatments</li></ul>"
+        },
+        "tab2": {
+          "title": "Support Services",
+          "content": "<p>Our comprehensive support services include:</p><ul><li>Nutritional counseling and support</li><li>Pain management and palliative care</li><li>Psychological and emotional support</li><li>Social work services</li><li>Support groups and patient education</li></ul>"
+        },
+        "tab3": {
+          "title": "Specializations",
+          "content": "<p>Our oncology specialists focus on:</p><ul><li>Breast cancer treatment and reconstruction</li><li>Lung cancer and thoracic oncology</li><li>Gastrointestinal cancers</li><li>Hematologic malignancies</li><li>Pediatric oncology</li></ul>"
+        }
+      }
+    }
   },
   {
     "id": 2,
     "name": "Neurology",
     "slug": "neurology",
-    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
+    "description": "Specialized care for disorders of the nervous system. Our neurology department offers comprehensive diagnosis and treatment for brain, spinal cord, and nerve conditions.",
     "icon": "flaticon-brain",
-    "image": "/images/resource/service-2.jpg",
-    "doctors": ["Dr. John Smith"],
-    "services": ["Brain Scan", "Neurological Exam", "EEG"]
+    "image": "/images/resource/service-2-full.jpg",
+    "secondaryImage": "/images/resource/service-2.jpg",
+    "doctors": [],
+    "services": ["Brain Scan", "Neurological Exam", "EEG", "Stroke Care"],
+    "brochures": [],
+    "content": {
+      "mainDescription": "<p>Our Neurology Department specializes in the diagnosis and treatment of disorders affecting the brain, spinal cord, and nervous system. We provide comprehensive neurological care with advanced diagnostic capabilities and innovative treatment approaches.</p><p>Our experienced neurologists work with a team of specialists to provide personalized care for conditions ranging from common neurological disorders to complex cases requiring specialized expertise.</p>",
+      "whyChoose": "<p>Our Neurology Department offers advanced diagnostic tools, experienced specialists, and comprehensive treatment options for all neurological conditions. We provide cutting-edge care with a focus on improving quality of life for our patients.</p>",
+      "tabs": {
+        "tab1": {
+          "title": "Diagnostic Services",
+          "content": "<p>Advanced diagnostic capabilities include:</p><ul><li>MRI and CT brain imaging</li><li>EEG and EMG studies</li><li>Lumbar puncture and CSF analysis</li><li>Neuropsychological testing</li><li>Sleep studies and polysomnography</li></ul>"
+        },
+        "tab2": {
+          "title": "Treatment Options",
+          "content": "<p>Comprehensive treatment approaches:</p><ul><li>Medication management and optimization</li><li>Physical and occupational therapy</li><li>Speech and language therapy</li><li>Botulinum toxin injections</li><li>Deep brain stimulation</li></ul>"
+        },
+        "tab3": {
+          "title": "Specializations",
+          "content": "<p>Our neurological specializations include:</p><ul><li>Stroke and cerebrovascular disease</li><li>Epilepsy and seizure disorders</li><li>Movement disorders (Parkinson's, etc.)</li><li>Multiple sclerosis and demyelinating diseases</li><li>Headache and migraine management</li></ul>"
+        }
+      }
+    }
   },
   {
     "id": 3,
-    "name": "Urology",
-    "slug": "urology",
-    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
-    "icon": "flaticon-kidney",
-    "image": "/images/resource/service-3.jpg",
-    "doctors": ["Dr. Mike Johnson"],
-    "services": ["Kidney Checkup", "Prostate Exam", "Urine Analysis"]
+    "name": "Gynecological",
+    "slug": "gynecological",
+    "description": "Complete women's health services. Our gynecological department provides comprehensive care for women's reproductive health and wellness.",
+    "icon": "flaticon-ovum",
+    "image": "/images/resource/service-3-full.jpg",
+    "secondaryImage": "/images/resource/service-3.jpg",
+    "doctors": [],
+    "services": ["Prenatal Care", "Pap Smear", "Ultrasound", "Family Planning"],
+    "brochures": [],
+    "content": {
+      "mainDescription": "<p>Our Gynecological Department provides comprehensive women's health services, from routine preventive care to complex gynecological procedures. We offer a full range of services to support women's health throughout all stages of life.</p><p>Our experienced gynecologists and healthcare team are dedicated to providing compassionate, personalized care with the latest medical advances and minimally invasive techniques.</p>",
+      "whyChoose": "<p>Our Gynecological Department combines advanced medical technology with compassionate care, offering comprehensive women's health services in a comfortable, supportive environment. We prioritize patient comfort and privacy while delivering the highest quality care.</p>",
+      "tabs": {
+        "tab1": {
+          "title": "Preventive Care",
+          "content": "<p>Comprehensive preventive services include:</p><ul><li>Annual well-woman exams</li><li>Pap smears and cervical cancer screening</li><li>Breast health and mammography referrals</li><li>STI testing and counseling</li><li>Contraceptive counseling and management</li></ul>"
+        },
+        "tab2": {
+          "title": "Pregnancy Care",
+          "content": "<p>Complete prenatal and postnatal care:</p><ul><li>Prenatal care and monitoring</li><li>High-risk pregnancy management</li><li>Ultrasound and fetal monitoring</li><li>Labor and delivery services</li><li>Postpartum care and support</li></ul>"
+        },
+        "tab3": {
+          "title": "Specialized Services",
+          "content": "<p>Advanced gynecological services:</p><ul><li>Minimally invasive surgery (laparoscopy)</li><li>Hysterectomy and uterine procedures</li><li>Treatment of gynecological cancers</li><li>Fertility evaluation and treatment</li><li>Menopause management</li></ul>"
+        }
+      }
+    }
   },
   {
     "id": 4,
-    "name": "Gynecological",
-    "slug": "gynecological",
-    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
-    "icon": "flaticon-ovum",
-    "image": "/images/resource/service-12.jpg",
-    "doctors": ["Dr. Sarah Wilson"],
-    "services": ["Prenatal Care", "Pap Smear", "Ultrasound"]
+    "name": "Pediatrical",
+    "slug": "pediatrical",
+    "description": "Specialized healthcare for infants, children, and adolescents. Our pediatric department provides comprehensive medical care for young patients.",
+    "icon": "flaticon-parents",
+    "image": "/images/resource/service-4-full.jpg",
+    "secondaryImage": "/images/resource/service-4.jpg",
+    "doctors": [],
+    "services": ["Child Checkup", "Vaccination", "Growth Monitoring", "Pediatric Emergency"],
+    "brochures": [],
+    "content": {
+      "mainDescription": "<p>Our Pediatric Department provides comprehensive healthcare services for infants, children, and adolescents. We offer specialized medical care tailored to the unique needs of young patients and their families.</p><p>Our experienced pediatricians and healthcare team are trained to provide age-appropriate care in a child-friendly environment, ensuring comfort and reducing anxiety for both children and parents.</p>",
+      "whyChoose": "<p>Our Pediatric Department offers specialized care for children with experienced pediatricians, child-friendly facilities, and comprehensive services. We focus on preventive care, early intervention, and family-centered care to ensure the best outcomes for our young patients.</p>",
+      "tabs": {
+        "tab1": {
+          "title": "Well-Child Care",
+          "content": "<p>Comprehensive pediatric preventive care:</p><ul><li>Regular check-ups and growth monitoring</li><li>Vaccination schedules and immunizations</li><li>Developmental assessments</li><li>Nutrition counseling and feeding support</li><li>Safety and injury prevention education</li></ul>"
+        },
+        "tab2": {
+          "title": "Acute Care",
+          "content": "<p>Treatment for common childhood conditions:</p><ul><li>Fever and infection management</li><li>Respiratory conditions (asthma, bronchitis)</li><li>Gastrointestinal issues</li><li>Skin conditions and allergies</li><li>Minor injuries and wound care</li></ul>"
+        },
+        "tab3": {
+          "title": "Specialized Services",
+          "content": "<p>Advanced pediatric services:</p><ul><li>Pediatric emergency care</li><li>Chronic disease management</li><li>Behavioral and developmental services</li><li>Adolescent medicine</li><li>Pediatric subspecialty referrals</li></ul>"
+        }
+      }
+    }
   },
   {
     "id": 5,
-    "name": "Pediatrical",
-    "slug": "pediatrical",
-    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
-    "icon": "flaticon-parents",
-    "image": "/images/resource/service-10.jpg",
-    "doctors": ["Dr. Lisa Brown"],
-    "services": ["Child Checkup", "Vaccination", "Growth Monitoring"]
+    "name": "Laboratory",
+    "slug": "laboratory",
+    "description": "Advanced diagnostic testing and pathology services. Our laboratory provides accurate and timely diagnostic results for better patient care.",
+    "icon": "flaticon-science",
+    "image": "/images/resource/service-5-full.jpg",
+    "secondaryImage": "/images/resource/service-5.jpg",
+    "doctors": [],
+    "services": ["Blood Tests", "Pathology", "Microbiology", "Biochemistry"],
+    "brochures": [],
+    "content": {
+      "mainDescription": "<p>Our Laboratory Department provides comprehensive diagnostic testing services with state-of-the-art equipment and highly trained laboratory professionals. We offer accurate, timely results to support clinical decision-making and patient care.</p><p>Our laboratory is equipped with advanced technology and follows strict quality control measures to ensure the highest standards of accuracy and reliability in all diagnostic tests.</p>",
+      "whyChoose": "<p>Our Laboratory Department provides accurate, timely diagnostic results with advanced technology and experienced staff. We maintain the highest quality standards and offer comprehensive testing services to support optimal patient care.</p>",
+      "tabs": {
+        "tab1": {
+          "title": "Clinical Chemistry",
+          "content": "<p>Comprehensive chemistry testing includes:</p><ul><li>Blood glucose and diabetes monitoring</li><li>Lipid profiles and cardiovascular risk assessment</li><li>Liver and kidney function tests</li><li>Electrolyte and mineral analysis</li><li>Hormone and endocrine testing</li></ul>"
+        },
+        "tab2": {
+          "title": "Hematology",
+          "content": "<p>Complete blood analysis services:</p><ul><li>Complete blood count (CBC)</li><li>Blood typing and crossmatching</li><li>Coagulation studies</li><li>Bone marrow analysis</li><li>Blood smear examination</li></ul>"
+        },
+        "tab3": {
+          "title": "Microbiology",
+          "content": "<p>Advanced microbiological testing:</p><ul><li>Bacterial culture and sensitivity</li><li>Viral testing and identification</li><li>Fungal and parasitic analysis</li><li>Antibiotic resistance testing</li><li>Molecular diagnostics (PCR)</li></ul>"
+        }
+      }
+    }
   },
   {
     "id": 6,
-    "name": "Laboratory",
-    "slug": "laboratory",
-    "description": "Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.",
-    "icon": "flaticon-science",
-    "image": "/images/resource/service-11.jpg",
-    "doctors": ["Dr. Tom Davis"],
-    "services": ["Blood Tests", "Pathology", "Microbiology"]
+    "name": "Orthopedic",
+    "slug": "orthopedic",
+    "description": "Comprehensive bone, joint, and musculoskeletal care. Our orthopedic department specializes in treating injuries and conditions affecting the musculoskeletal system.",
+    "icon": "flaticon-bone",
+    "image": "/images/resource/service-6-full.jpg",
+    "secondaryImage": "/images/resource/service-6.jpg",
+    "doctors": [],
+    "services": ["Joint Replacement", "Fracture Care", "Sports Medicine", "Spine Surgery"],
+    "brochures": [],
+    "content": {
+      "mainDescription": "<p>Our Orthopedic Department specializes in the diagnosis and treatment of musculoskeletal conditions, including bones, joints, muscles, ligaments, and tendons. We provide comprehensive orthopedic care with both surgical and non-surgical treatment options.</p><p>Our experienced orthopedic surgeons and specialists use advanced techniques and state-of-the-art equipment to restore function and improve quality of life for patients with orthopedic conditions.</p>",
+      "whyChoose": "<p>Our Orthopedic Department offers advanced surgical techniques, comprehensive rehabilitation services, and experienced specialists. We provide personalized treatment plans and use the latest technology to ensure the best outcomes for our patients.</p>",
+      "tabs": {
+        "tab1": {
+          "title": "Surgical Services",
+          "content": "<p>Advanced orthopedic surgical procedures:</p><ul><li>Joint replacement surgery (hip, knee, shoulder)</li><li>Arthroscopic surgery and minimally invasive procedures</li><li>Spine surgery and spinal fusion</li><li>Fracture repair and trauma surgery</li><li>Sports medicine and ligament reconstruction</li></ul>"
+        },
+        "tab2": {
+          "title": "Non-Surgical Treatment",
+          "content": "<p>Conservative treatment options include:</p><ul><li>Physical therapy and rehabilitation</li><li>Pain management and injections</li><li>Bracing and orthotic devices</li><li>Activity modification and lifestyle counseling</li><li>Medication management</li></ul>"
+        },
+        "tab3": {
+          "title": "Specializations",
+          "content": "<p>Our orthopedic specializations include:</p><ul><li>Sports medicine and athletic injuries</li><li>Pediatric orthopedics</li><li>Hand and upper extremity surgery</li><li>Foot and ankle surgery</li><li>Spine and back surgery</li></ul>"
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "name": "Physiotherapy",
+    "slug": "physiotherapy",
+    "description": "Rehabilitation and physical therapy services. Our physiotherapy department helps patients recover from injuries and improve their physical function.",
+    "icon": "flaticon-exercise",
+    "image": "/images/resource/service-7-full.jpg",
+    "secondaryImage": "/images/resource/service-7.jpg",
+    "doctors": [],
+    "services": ["Physical Therapy", "Rehabilitation", "Pain Management", "Exercise Therapy"],
+    "brochures": [],
+    "content": {
+      "mainDescription": "<p>Our Physiotherapy Department provides comprehensive rehabilitation services to help patients recover from injuries, surgeries, and chronic conditions. We offer personalized treatment plans to restore function, reduce pain, and improve quality of life.</p><p>Our licensed physical therapists use evidence-based techniques and state-of-the-art equipment to provide effective rehabilitation services in a supportive, encouraging environment.</p>",
+      "whyChoose": "<p>Our Physiotherapy Department offers personalized treatment plans, experienced therapists, and modern equipment. We focus on patient-centered care and use evidence-based techniques to achieve optimal recovery outcomes.</p>",
+      "tabs": {
+        "tab1": {
+          "title": "Rehabilitation Services",
+          "content": "<p>Comprehensive rehabilitation programs:</p><ul><li>Post-surgical rehabilitation</li><li>Sports injury recovery</li><li>Stroke and neurological rehabilitation</li><li>Cardiac rehabilitation</li><li>Work-related injury recovery</li></ul>"
+        },
+        "tab2": {
+          "title": "Treatment Techniques",
+          "content": "<p>Advanced treatment modalities include:</p><ul><li>Manual therapy and joint mobilization</li><li>Therapeutic exercise and strengthening</li><li>Electrical stimulation and ultrasound</li><li>Heat and cold therapy</li><li>Balance and coordination training</li></ul>"
+        },
+        "tab3": {
+          "title": "Specialized Programs",
+          "content": "<p>Specialized therapy programs:</p><ul><li>Pediatric physical therapy</li><li>Geriatric rehabilitation</li><li>Vestibular and balance therapy</li><li>Aquatic therapy</li><li>Pain management programs</li></ul>"
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "name": "Palliative Care",
+    "slug": "palliative-care",
+    "description": "Compassionate care for patients with serious illnesses. Our palliative care department focuses on improving quality of life and providing comfort.",
+    "icon": "flaticon-care",
+    "image": "/images/resource/service-8-full.jpg",
+    "secondaryImage": "/images/resource/service-8.jpg",
+    "doctors": [],
+    "services": ["Pain Management", "Symptom Control", "Emotional Support", "End-of-Life Care"],
+    "brochures": [],
+    "content": {
+      "mainDescription": "<p>Our Palliative Care Department provides compassionate, comprehensive care for patients with serious illnesses, focusing on improving quality of life and providing comfort. We offer specialized medical care, pain management, and emotional support for patients and their families.</p><p>Our interdisciplinary team of healthcare professionals works together to address physical, emotional, and spiritual needs, ensuring patients receive the best possible care during difficult times.</p>",
+      "whyChoose": "<p>Our Palliative Care Department provides compassionate, specialized care with a focus on comfort and quality of life. We offer comprehensive support services and work closely with patients and families to ensure their needs are met.</p>",
+      "tabs": {
+        "tab1": {
+          "title": "Pain Management",
+          "content": "<p>Comprehensive pain and symptom management:</p><ul><li>Advanced pain assessment and treatment</li><li>Medication management and optimization</li><li>Non-pharmacological pain relief techniques</li><li>Nausea and vomiting control</li><li>Breathing and respiratory support</li></ul>"
+        },
+        "tab2": {
+          "title": "Support Services",
+          "content": "<p>Comprehensive support and counseling:</p><ul><li>Emotional and psychological support</li><li>Spiritual care and chaplaincy services</li><li>Social work and family counseling</li><li>Nutritional support and dietary counseling</li><li>Complementary therapies (music, art therapy)</li></ul>"
+        },
+        "tab3": {
+          "title": "Care Coordination",
+          "content": "<p>Integrated care coordination services:</p><ul><li>Care planning and goal setting</li><li>Communication with healthcare providers</li><li>Advance care planning and directives</li><li>Hospice care coordination</li><li>Bereavement support and counseling</li></ul>"
+        }
+      }
+    }
   }
 ]
