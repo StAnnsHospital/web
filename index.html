@@ -99,13 +99,11 @@
             
             // Only update if the URL is different to prevent loops
             if (correctUrl !== l.href) {
-              console.log('Updating URL to:', correctUrl);
+              console.log('index.html: Updating URL to:', correctUrl);
               window.history.replaceState(null, null, correctUrl);
               
-              // Force a page reload to ensure Vue Router picks up the new URL
-              setTimeout(function() {
-                window.location.reload();
-              }, 100);
+              // Let Vue Router handle the navigation instead of forcing a reload
+              // The page reload was causing the infinite loop
             }
           } catch (e) {
             console.error('Error processing SPA redirect:', e);
