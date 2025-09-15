@@ -51,11 +51,17 @@ jobs:
         npm run build
         echo "Build completed successfully"
 
+    - name: Copy 404.html for SPA routing
+      run: |
+        echo "Copying 404.html to dist folder for SPA routing..."
+        cp 404.html dist/404.html
+        echo "404.html copied successfully"
         
     - name: Verify build output
       run: |
         ls -la dist/
         test -f dist/index.html
+        test -f dist/404.html
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
