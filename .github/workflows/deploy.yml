@@ -50,26 +50,7 @@ jobs:
         echo "Starting build process..."
         npm run build
         echo "Build completed successfully"
-        
-    - name: Fix asset paths for GitHub Pages
-      run: |
-        echo "Fixing asset paths for GitHub Pages deployment..."
-        # Fix all asset paths in built HTML files
-        find dist -name "*.html" -exec sed -i 's|src="js/|src="/web/js/|g' {} \;
-        find dist -name "*.html" -exec sed -i 's|href="/css/|href="/web/css/|g' {} \;
-        find dist -name "*.html" -exec sed -i 's|href="/images/|href="/web/images/|g' {} \;
-        find dist -name "*.html" -exec sed -i 's|src="/images/|src="/web/images/|g' {} \;
-        
-        # Fix image paths in built JavaScript files (Vue components and JSON data)
-        # Only fix paths that don't already have /web/ prefix
-        find dist -name "*.js" -exec sed -i 's|"/images/|"/web/images/|g' {} \;
-        find dist -name "*.js" -exec sed -i 's|/images/|/web/images/|g' {} \;
-        
-        # Fix double /web/web/ paths back to single /web/
-        find dist -name "*.js" -exec sed -i 's|/web/web/|/web/|g' {} \;
-        find dist -name "*.html" -exec sed -i 's|/web/web/|/web/|g' {} \;
-        
-        echo "Asset paths fixed for GitHub Pages"
+
         
     - name: Verify build output
       run: |
