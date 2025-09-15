@@ -83,11 +83,21 @@
           <span class="divider"></span>
         </div>
 
-        <div class="row">
-          <DoctorCard v-for="doctor in doctors" :key="doctor.id" :doctor="doctor" />
+        <!-- Doctors Slider -->
+        <div class="doctors-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="doctor in featuredDoctors" :key="doctor.id">
+              <DoctorCard :doctor="doctor" />
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
 
-        <div class="sec-bottom-text">Don't hesitate, contact us for better help and services <a href="#">Explore all Dr. Team</a></div>
+        <div class="sec-bottom-text">Don't hesitate, contact us for better help and services <router-link to="/doctors">Explore all Dr. Team</router-link></div>
       </div>
     </section>
     <!-- End Team Section -->
@@ -122,6 +132,9 @@ const siteConfig = ref(siteConfigData)
 const features = ref(featuresData)
 const services = ref(servicesData)
 const doctors = ref(doctorsData)
+
+// Show only first 6 doctors on home page
+const featuredDoctors = ref(doctorsData.slice(0, 6))
 
 onMounted(() => {
   // Initialize interactive components
@@ -160,6 +173,34 @@ onMounted(() => {
             480: { slidesPerView: 3 },
             768: { slidesPerView: 4 },
             1024: { slidesPerView: 5 }
+          }
+        })
+      }
+
+      // Initialize doctors slider
+      if ($('.doctors-swiper').length && typeof (window as any).Swiper === 'function') {
+        new (window as any).Swiper(".doctors-swiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: true,
+          speed: 800,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            480: { slidesPerView: 2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
           }
         })
       }
@@ -234,3 +275,170 @@ onMounted(() => {
   }
 })
 </script>
+
+<style scoped>
+/* Doctors Slider Styling */
+.doctors-swiper {
+  padding: 20px 0 60px;
+  overflow: hidden;
+}
+
+.doctors-swiper .swiper-slide {
+  height: auto;
+}
+
+/* Ensure doctor cards maintain original size */
+.doctors-swiper .team-block {
+  width: 100%;
+  max-width: none;
+}
+
+.doctors-swiper .inner-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctors-swiper .image {
+  height: 280px;
+  overflow: hidden;
+}
+
+.doctors-swiper .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.doctors-swiper .inner-box:hover .image img {
+  transform: scale(1.05);
+}
+
+/* Fix hover text visibility */
+.doctors-swiper .info-box {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.doctors-swiper .name a {
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.doctors-swiper .name a:hover {
+  color: #1370b5;
+}
+
+.doctors-swiper .designation {
+  color: #1370b5;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin: 5px 0;
+}
+
+.doctors-swiper .experience {
+  color: #666;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Social links hover fix */
+.doctors-swiper .social-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.doctors-swiper .inner-box:hover .social-links {
+  opacity: 1;
+}
+
+.doctors-swiper .social-links li a {
+  color: white;
+  background: rgba(19, 112, 181, 0.8);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.doctors-swiper .social-links li a:hover {
+  background: #1370b5;
+  transform: scale(1.1);
+}
+
+.doctors-swiper .swiper-button-next,
+.doctors-swiper .swiper-button-prev {
+  color: #1370b5;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.doctors-swiper .swiper-button-next:hover,
+.doctors-swiper .swiper-button-prev:hover {
+  background: #1370b5;
+  color: white;
+  transform: scale(1.1);
+}
+
+.doctors-swiper .swiper-button-next:after,
+.doctors-swiper .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.doctors-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.doctors-swiper .swiper-pagination-bullet {
+  background: #1370b5;
+  opacity: 0.3;
+  width: 12px;
+  height: 12px;
+}
+
+.doctors-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .doctors-swiper {
+    padding: 20px 0 50px;
+  }
+  
+  .doctors-swiper .swiper-button-next,
+  .doctors-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .doctors-swiper .swiper-button-next:after,
+  .doctors-swiper .swiper-button-prev:after {
+    font-size: 14px;
+  }
+  
+  .doctors-swiper .image {
+    height: 250px;
+  }
+}
+</style>

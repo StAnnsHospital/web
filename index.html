@@ -46,7 +46,7 @@
     
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages - Fixed Version
+      // Single Page Apps for GitHub Pages
       // This script handles the redirect from 404.html and restores the correct URL
       (function() {
         var l = window.location;
@@ -54,20 +54,35 @@
         // Check if we have a redirect in the query string
         if (l.search.indexOf('?/') === 0) {
           try {
-            // Decode the redirect path
-            var pathPart = l.search.slice(2).split('&')[0];
-            var queryPart = l.search.slice(2).split('&').slice(1).join('&');
+            // Get the full query string after ?/
+            var fullQuery = l.search.slice(2);
             
-            // Decode the path and query
+            // Split by & to separate path from query parameters
+            var parts = fullQuery.split('&');
+            var pathPart = parts[0];
+            var queryParts = parts.slice(1);
+            
+            // Decode the path (replace ~and~ with &)
             var decodedPath = pathPart.replace(/~and~/g, '&');
-            var decodedQuery = queryPart.replace(/~and~/g, '&');
+            
+            // Remove trailing slash if present
+            if (decodedPath.length > 1 && decodedPath.endsWith('/')) {
+              decodedPath = decodedPath.slice(0, -1);
+            }
+            
+            // Decode query parameters
+            var decodedQuery = queryParts.map(function(part) {
+              return part.replace(/~and~/g, '&');
+            }).join('&');
             
             // Build the correct URL
             var correctUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + 
               decodedPath + (decodedQuery ? '?' + decodedQuery : '') + l.hash;
             
-            // Replace the current URL in history without causing a page reload
-            window.history.replaceState(null, null, correctUrl);
+            // Only update if the URL is different to prevent loops
+            if (correctUrl !== l.href) {
+              window.history.replaceState(null, null, correctUrl);
+            }
           } catch (e) {
             console.error('Error processing SPA redirect:', e);
           }
