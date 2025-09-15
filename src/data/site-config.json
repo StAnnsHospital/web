@@ -48,9 +48,21 @@
         "path": "/doctors",
         "children": [
           { "label": "All Doctors", "path": "/doctors" },
-          { "label": "Dr. John Smith", "path": "/doctor/1" },
-          { "label": "Dr. Sarah Johnson", "path": "/doctor/2" },
-          { "label": "Dr. Michael Brown", "path": "/doctor/3" }
+          { "label": "Dr. K. V. Raghavaiah", "path": "/doctor/1" },
+          { "label": "Dr. V. Hemanth", "path": "/doctor/2" },
+          { "label": "Dr. B. Prathap Reddy", "path": "/doctor/3" },
+          { "label": "Dr. J. Pradeep", "path": "/doctor/4" },
+          { "label": "Dr. Suvarna Ratnam Matla", "path": "/doctor/5" },
+          { "label": "Dr. E. Kiranmai", "path": "/doctor/6" },
+          { "label": "Dr. A. Pattabhi Ramaiah", "path": "/doctor/7" },
+          { "label": "Dr. Chada Pradeep Kumar", "path": "/doctor/8" },
+          { "label": "Dr. K. Ashok", "path": "/doctor/9" },
+          { "label": "Dr. Sravan Kumar Ankathi", "path": "/doctor/10" },
+          { "label": "Dr. Naveen Korivi", "path": "/doctor/11" },
+          { "label": "Dr. Yempati Bhargav", "path": "/doctor/12" },
+          { "label": "Dr. Nikhil", "path": "/doctor/13" },
+          { "label": "Dr. Meghana Mudide", "path": "/doctor/14" },
+          { "label": "Dr. Vinodh Kumar Dussa", "path": "/doctor/15" }
         ]
       },
       {

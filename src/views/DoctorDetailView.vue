@@ -47,10 +47,6 @@
                   <p>{{ doctor.address }}</p>
                 </li>
                 <li>
-                  <strong>Timing</strong>
-                  <p>{{ doctor.timing }}</p>
-                </li>
-                <li>
                   <strong>Phone</strong>
                   <p><a :href="`tel:${doctor.phone}`">{{ doctor.phone }}</a></p>
                 </li>
@@ -65,39 +61,35 @@
               </ul>
             </div>
 
-            <div class="appointment-form default-form">
+              <div class="appointment-form default-form">
               <div class="sec-title">
-                <span class="sub-title">Online Appoinment</span>
-                <h2 class="text-reveal-anim">Make An Appointment</h2>
+                <span class="sub-title">Book Your Consultation</span>
+                <h2>Make An Appointment</h2>
                 <span class="divider"></span>
               </div>
-
-              <!--Comment Form-->
-              <form @submit.prevent="submitAppointment" id="email-form">
-                <div class="row">
-                  <div class="form-group col-lg-6 col-md-12">
-                    <input type="text" v-model="appointmentForm.name" name="username" placeholder="Your Name" required>
-                  </div>
-
-                  <div class="form-group col-lg-6 col-md-12">
-                    <input type="text" v-model="appointmentForm.phone" name="phone" placeholder="Your Phone" required>
-                  </div>
-
-                  <div class="form-group col-lg-12 col-md-12">
-                    <input type="email" v-model="appointmentForm.email" name="email" placeholder="Your Email *" required>
-                  </div>
-                  
-                  <div class="form-group col-lg-12 col-md-12">
-                    <textarea v-model="appointmentForm.message" name="contact_message" placeholder="Tell us about Patient"></textarea>
-                  </div>
-                  
-                  <div class="form-group col-lg-12 col-md-12">
-                    <button class="theme-btn btn-style-one" type="submit" :disabled="isSubmitting">
-                      <span class="btn-title">{{ isSubmitting ? 'Submitting...' : 'Submit Query' }}</span>
-                    </button>
-                  </div>
+              
+              <div class="text">
+                <p>Ready to schedule your consultation with <strong>{{ doctor.name }}</strong>? Our experienced medical team is here to provide you with the best possible care. Book your appointment today and take the first step towards better health.</p>
+                
+                <p>For your convenience, you can:</p>
+                <ul class="appointment-features">
+                  <li><i class="fa fa-check"></i> Schedule appointments online 24/7</li>
+                  <li><i class="fa fa-check"></i> Choose your preferred date and time</li>
+                  <li><i class="fa fa-check"></i> Receive appointment confirmations via SMS/Email</li>
+                  <li><i class="fa fa-check"></i> Get reminders before your visit</li>
+                </ul>
+              </div>
+              
+              <div class="appointment-actions">
+                <router-link to="/appointment" class="theme-btn btn-style-one">
+                  <span class="btn-title">Book Appointment Online</span>
+                </router-link>
+                
+                <div class="contact-info">
+                  <p><strong>Or call us directly:</strong></p>
+                  <a :href="`tel:${doctor.phone}`" class="phone-link">{{ doctor.phone }}</a>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
 
@@ -121,16 +113,25 @@
               <div class="docter-availability">
                 <div class="inner">
                   <div class="sec-title">
-                    <span class="sub-title">Timining</span>
-                    <h2 class="text-reveal-anim">Availability</h2>
+                    <span class="sub-title">Contact Information</span>
+                    <h2>Get In Touch</h2>
                     <span class="divider"></span>
-                    <div class="text">Suspendisse potenti. Maecenas dapibus ac tellus sed pulvinar. Vestibulum bib volutpat accumsan non laoreet nulla luctus.</div>
+                    <div class="text">Please contact the hospital directly to schedule an appointment with Dr. {{ doctor.name.split(' ').slice(-1)[0] }}. Our staff will help you find the most convenient time for your consultation.</div>
                   </div>
-                  <ul class="timing-list-two">
-                    <li>Monday - Friday <span>08:00 - 20:00</span></li>
-                    <li>Saturday <span>09:00 - 18:00</span></li>
-                    <li>Sunday <span>09:00 - 18:00</span></li>
-                  </ul>
+                  <div class="contact-info">
+                    <div class="contact-item">
+                      <strong>Phone:</strong>
+                      <a :href="`tel:${doctor.phone}`">{{ doctor.phone }}</a>
+                    </div>
+                    <div class="contact-item">
+                      <strong>Email:</strong>
+                      <a :href="`mailto:${doctor.email}`">{{ doctor.email }}</a>
+                    </div>
+                    <div class="contact-item">
+                      <strong>Address:</strong>
+                      <span>{{ doctor.address }}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -183,18 +184,9 @@ import doctorsData from '@/data/doctors.json'
 
 const route = useRoute()
 const doctors = ref(doctorsData)
-const isSubmitting = ref(false)
 
 // Get doctor by ID from route params or default to first doctor
 const doctor = ref(doctors.value[0])
-
-// Appointment form
-const appointmentForm = ref({
-  name: '',
-  phone: '',
-  email: '',
-  message: ''
-})
 
 // Other doctors (excluding current doctor)
 const otherDoctors = computed(() => {
@@ -217,34 +209,111 @@ watch(() => route.params.id, () => {
   setDoctorFromRoute()
 })
 
-// Submit appointment form
-const submitAppointment = async () => {
-  isSubmitting.value = true
-  
-  try {
-    console.log('Appointment submitted:', appointmentForm.value)
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    // Reset form
-    appointmentForm.value = {
-      name: '',
-      phone: '',
-      email: '',
-      message: ''
-    }
-    
-    alert('Appointment request submitted successfully!')
-  } catch (error) {
-    console.error('Error submitting appointment:', error)
-    alert('Error submitting appointment. Please try again.')
-  } finally {
-    isSubmitting.value = false
-  }
-}
 
 onMounted(() => {
   setDoctorFromRoute()
 })
 </script>
+
+<style scoped>
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-item {
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #1370b5;
+  font-weight: 600;
+}
+
+.contact-item a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #1370b5;
+}
+
+.contact-item span {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Simple styling to match theme */
+.appointment-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.appointment-features li {
+  padding: 8px 0;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.appointment-features li i {
+  color: #1370b5;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.appointment-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.appointment-actions .theme-btn {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.phone-link {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1370b5;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #1370b5;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+  background: #1370b5;
+  color: white;
+}
+
+/* Fix button hover text visibility */
+.appointment-actions .theme-btn:hover .btn-title {
+  color: white !important;
+}
+
+.appointment-actions .theme-btn .btn-title {
+  color: white;
+  transition: color 0.3s ease;
+}
+</style>
