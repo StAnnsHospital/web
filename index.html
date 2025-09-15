@@ -46,29 +46,45 @@
     
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
+      // Custom domain SPA redirect handler
       // This script handles the redirect from 404.html and restores the correct URL
       (function() {
         var l = window.location;
         
+        console.log('Current URL:', l.href);
+        console.log('Search:', l.search);
+        
         // Check if we have a redirect in the query string
         if (l.search.indexOf('?/') === 0) {
           try {
+            console.log('Processing SPA redirect...');
+            
             // Get the full query string after ?/
             var fullQuery = l.search.slice(2);
+            console.log('Full query after ?/:', fullQuery);
             
             // Split by & to separate path from query parameters
             var parts = fullQuery.split('&');
             var pathPart = parts[0];
             var queryParts = parts.slice(1);
             
+            console.log('Path part:', pathPart);
+            console.log('Query parts:', queryParts);
+            
             // Decode the path (replace ~and~ with &)
             var decodedPath = pathPart.replace(/~and~/g, '&');
+            
+            // Ensure path starts with /
+            if (decodedPath && !decodedPath.startsWith('/')) {
+              decodedPath = '/' + decodedPath;
+            }
             
             // Remove trailing slash if present
             if (decodedPath.length > 1 && decodedPath.endsWith('/')) {
               decodedPath = decodedPath.slice(0, -1);
             }
+            
+            console.log('Decoded path:', decodedPath);
             
             // Decode query parameters
             var decodedQuery = queryParts.map(function(part) {
@@ -79,9 +95,17 @@
             var correctUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + 
               decodedPath + (decodedQuery ? '?' + decodedQuery : '') + l.hash;
             
+            console.log('Correct URL:', correctUrl);
+            
             // Only update if the URL is different to prevent loops
             if (correctUrl !== l.href) {
+              console.log('Updating URL to:', correctUrl);
               window.history.replaceState(null, null, correctUrl);
+              
+              // Force a page reload to ensure Vue Router picks up the new URL
+              setTimeout(function() {
+                window.location.reload();
+              }, 100);
             }
           } catch (e) {
             console.error('Error processing SPA redirect:', e);
