@@ -37,7 +37,7 @@
 
           <div class="filter-list row mid-spacing">
             <div
-              v-for="item in filteredItems"
+              v-for="item in displayedItems"
               :key="item.id"
               :class="['portfolio-block', 'col-lg-4', 'col-md-6', 'col-sm-12', ...item.filters]"
             >
@@ -50,8 +50,8 @@
                   <div class="title-box">
                     <h5>{{ item.title }}</h5>
                     <div class="cat">
-                      <template v-for="(tag, idx) in item.tags" :key="tag">
-                        <a href="#">{{ tag }}</a><span v-if="idx < item.tags.length - 1">,</span>
+                      <template v-for="(filter, idx) in item.filters" :key="filter">
+                        <a href="#">{{ filter.replace(/[-_]/g, ' ').replace(/\b\w/g, s => s.toUpperCase()) }}</a><span v-if="idx < item.filters.length - 1">,</span>
                       </template>
                     </div>
                   </div>
@@ -60,8 +60,19 @@
             </div>
           </div> <!-- /.filter-list -->
         </div>
-        <div class="btn-box">
-          <a href="#" class="theme-btn btn-style-three load-more"><span class="btn-title">Load More</span></a>
+        
+        <!-- Load More Button -->
+        <div class="btn-box" v-if="hasMoreItems">
+          <a href="#" class="theme-btn btn-style-three load-more" @click.prevent="loadMore">
+            <span class="btn-title">Load More ({{ remainingCount }} remaining)</span>
+          </a>
+        </div>
+        
+        <!-- Show All Button when all items are loaded -->
+        <div class="btn-box" v-else-if="displayedItems.length > itemsPerPage">
+          <a href="#" class="theme-btn btn-style-three" @click.prevent="showAll">
+            <span class="btn-title">Show All Items</span>
+          </a>
         </div>
       </div>
     </section>
@@ -71,7 +82,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue'
+import { onMounted, ref, computed, watch } from 'vue'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import rawItems from '@/data/galleryItems.json'
@@ -86,8 +97,9 @@ declare global {
 }
 
 const galleryItems = ref(rawItems)
-
 const activeFilter = ref('all')
+const itemsPerPage = ref(6) // Show 6 items initially
+const displayedCount = ref(itemsPerPage.value)
 
 // Filtering is driven by Vue's computed `filteredItems` to avoid conflicts with vendor DOM plugins.
 // Build UI-friendly filter list (keeps 'all' first)
@@ -107,12 +119,44 @@ const filteredItems = computed(() => {
   return galleryItems.value.filter(i => Array.isArray(i.filters) && i.filters.includes(activeFilter.value))
 })
 
+// Displayed items with pagination
+const displayedItems = computed(() => {
+  return filteredItems.value.slice(0, displayedCount.value)
+})
 
+// Check if there are more items to load
+const hasMoreItems = computed(() => {
+  return displayedCount.value < filteredItems.value.length
+})
+
+// Count of remaining items
+const remainingCount = computed(() => {
+  return filteredItems.value.length - displayedCount.value
+})
 
 const setFilter = (key: string) => {
-  // Pure Vue-driven filter: update the active filter and let `filteredItems` recompute.
+  // Reset pagination when filter changes
+  displayedCount.value = itemsPerPage.value
   activeFilter.value = key
 }
+
+const loadMore = () => {
+  // Load more items (increase by itemsPerPage)
+  displayedCount.value = Math.min(
+    displayedCount.value + itemsPerPage.value,
+    filteredItems.value.length
+  )
+}
+
+const showAll = () => {
+  // Show all items
+  displayedCount.value = filteredItems.value.length
+}
+
+// Watch for filter changes to reset pagination
+watch(activeFilter, () => {
+  displayedCount.value = itemsPerPage.value
+})
 
 onMounted(() => {
   // Small delay for vendor libraries to attach

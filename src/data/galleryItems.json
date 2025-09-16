@@ -3,161 +3,161 @@
     "id": 1,
     "image": "/images/gallery/1-1.JPG",
     "title": "Hospital Exterior – Front View",
-    "filters": ["infrastructure", "exterior"],
+    "filters": ["infrastructure"],
     "tags": ["Main Entrance", "Hospital Building", "Facade"]
   },
   {
     "id": 2,
     "image": "/images/gallery/1-2.JPG",
     "title": "Rear Entrance & Driveway",
-    "filters": ["infrastructure", "exterior"],
+    "filters": ["infrastructure"],
     "tags": ["Ambulance Access", "Parking", "Emergency Access"]
   },
   {
     "id": 3,
     "image": "/images/gallery/1-3.JPG",
     "title": "Main Lobby & Reception",
-    "filters": ["infrastructure", "reception"],
+    "filters": ["infrastructure"],
     "tags": ["Patient Waiting", "Lobby", "Information Desk"]
   },
   {
     "id": 4,
     "image": "/images/gallery/1-4.JPG",
     "title": "OPD Registration & Corridor",
-    "filters": ["opd", "infrastructure"],
+    "filters": ["outpatient"],
     "tags": ["Registration", "Outpatient", "Corridor"]
   },
   {
     "id": 5,
     "image": "/images/gallery/1-5.JPG",
     "title": "OPD Consultation Rooms",
-    "filters": ["opd", "consultation"],
+    "filters": ["outpatient"],
     "tags": ["Doctor Consultation", "Examination", "Outpatient Care"]
   },
   {
     "id": 6,
     "image": "/images/gallery/1-6.JPG",
     "title": "General Ward",
-    "filters": ["inpatient", "wards"],
+    "filters": ["inpatient"],
     "tags": ["Inpatient Care", "Nursing Station", "Patient Rooms"]
   },
   {
     "id": 7,
     "image": "/images/gallery/1-7.JPG",
     "title": "Private Patient Room",
-    "filters": ["inpatient", "wards"],
+    "filters": ["inpatient"],
     "tags": ["Private Room", "Comfort", "Patient Care"]
   },
   {
     "id": 8,
     "image": "/images/gallery/1-8.JPG",
     "title": "Operation Theatre",
-    "filters": ["surgery", "operation"],
+    "filters": ["surgery"],
     "tags": ["OT", "Advanced Equipment", "Surgical Care"]
   },
   {
     "id": 9,
     "image": "/images/gallery/1-9.JPG",
     "title": "Central Sterilization Unit",
-    "filters": ["support-services", "surgery"],
+    "filters": ["surgery"],
     "tags": ["CSSD", "Infection Control", "Sterilization"]
   },
   {
     "id": 10,
     "image": "/images/gallery/1-10.JPG",
     "title": "Emergency Department",
-    "filters": ["emergency", "critical-care"],
+    "filters": ["critical-care"],
     "tags": ["Emergency Care", "24x7 Service", "Trauma Center"]
   },
   {
     "id": 11,
     "image": "/images/gallery/1-11.JPG",
     "title": "ICU - Intensive Care Unit",
-    "filters": ["critical-care", "inpatient"],
+    "filters": ["critical-care"],
     "tags": ["Intensive Care", "Critical Patients", "Advanced Monitoring"]
   },
   {
     "id": 12,
     "image": "/images/gallery/1-12.JPG",
     "title": "Laboratory Services",
-    "filters": ["support-services", "diagnostics"],
+    "filters": ["diagnostics"],
     "tags": ["Pathology", "Blood Tests", "Diagnostic Services"]
   },
   {
     "id": 13,
     "image": "/images/gallery/1-13.JPG",
     "title": "Radiology Department",
-    "filters": ["diagnostics", "imaging"],
+    "filters": ["diagnostics"],
     "tags": ["X-Ray", "CT Scan", "Medical Imaging"]
   },
   {
     "id": 14,
     "image": "/images/gallery/1-14.JPG",
     "title": "Pharmacy & Medicine Store",
-    "filters": ["support-services", "pharmacy"],
+    "filters": ["support-services"],
     "tags": ["Medicines", "Prescription", "Drug Store"]
   },
   {
     "id": 15,
     "image": "/images/gallery/1-15.JPG",
     "title": "Physiotherapy Department",
-    "filters": ["rehabilitation", "therapy"],
+    "filters": ["support-services"],
     "tags": ["Physical Therapy", "Rehabilitation", "Exercise Therapy"]
   },
   {
     "id": 16,
     "image": "/images/gallery/1-16.JPG",
     "title": "Maternity Ward",
-    "filters": ["maternity", "inpatient"],
+    "filters": ["specialty"],
     "tags": ["Delivery Room", "Mother & Child", "Obstetrics"]
   },
   {
     "id": 17,
     "image": "/images/gallery/1-17.JPG",
     "title": "Pediatric Ward",
-    "filters": ["pediatrics", "inpatient"],
+    "filters": ["specialty"],
     "tags": ["Children's Care", "Pediatric Medicine", "Child-Friendly"]
   },
   {
     "id": 18,
     "image": "/images/gallery/1-18.JPG",
     "title": "Cardiology Department",
-    "filters": ["specialty", "cardiology"],
+    "filters": ["specialty"],
     "tags": ["Heart Care", "Cardiac Services", "ECG"]
   },
   {
     "id": 19,
     "image": "/images/gallery/1-19.JPG",
     "title": "Orthopedic Department",
-    "filters": ["specialty", "orthopedics"],
+    "filters": ["specialty"],
     "tags": ["Bone & Joint", "Fracture Care", "Orthopedic Surgery"]
   },
   {
     "id": 20,
     "image": "/images/gallery/1-20.JPG",
     "title": "Dialysis Unit",
-    "filters": ["specialty", "nephrology"],
+    "filters": ["specialty"],
     "tags": ["Kidney Care", "Dialysis", "Renal Services"]
   },
   {
     "id": 21,
     "image": "/images/gallery/1-21.JPG",
     "title": "Oncology Department",
-    "filters": ["specialty", "oncology"],
+    "filters": ["specialty"],
     "tags": ["Cancer Care", "Chemotherapy", "Radiation Therapy"]
   },
   {
     "id": 22,
     "image": "/images/gallery/1-22.JPG",
     "title": "Cafeteria & Dining",
-    "filters": ["support-services", "facilities"],
+    "filters": ["support-services"],
     "tags": ["Food Service", "Cafeteria", "Dining Hall"]
   },
   {
     "id": 23,
     "image": "/images/gallery/1-23.JPG",
     "title": "Administrative Office",
-    "filters": ["administration", "facilities"],
+    "filters": ["support-services"],
     "tags": ["Management", "Administration", "Office Space"]
   }
 ]
