@@ -1,63 +1,63 @@
 [
   {
     "id": 1,
-    "image": "/images/gallery/1-1.JPG",
+    "image": "/images/gallery/1-1.jpg",
     "title": "Hospital Exterior – Front",
     "filters": ["infrastructure", "emergency"],
     "tags": ["Multi-Speciality", "24x7 Emergency"]
   },
   {
     "id": 2,
-    "image": "/images/gallery/1-2.JPG",
+    "image": "/images/gallery/1-2.jpg",
     "title": "Rear Entrance & Driveway",
     "filters": ["infrastructure", "emergency"],
     "tags": ["Ambulance Access", "Ramp"]
   },
   {
     "id": 3,
-    "image": "/images/gallery/1-3.JPG",
+    "image": "/images/gallery/1-3.jpg",
     "title": "Main Lobby & Waiting",
     "filters": ["OPD", "infrastructure"],
     "tags": ["Patient Waiting", "Lobby"]
   },
   {
     "id": 4,
-    "image": "/images/gallery/1-4.JPG",
+    "image": "/images/gallery/1-4.jpg",
     "title": "Reception & OPD Corridor",
     "filters": ["OPD", "infrastructure"],
     "tags": ["Registration", "Outpatient"]
   },
   {
     "id": 5,
-    "image": "/images/gallery/1-5.JPG",
+    "image": "/images/gallery/1-5.jpg",
     "title": "OPD Consultation Zone",
     "filters": ["OPD", "infrastructure"],
     "tags": ["Consultation Rooms", "Outpatient"]
   },
   {
     "id": 6,
-    "image": "/images/gallery/1-6.JPG",
+    "image": "/images/gallery/1-6.jpg",
     "title": "General Ward",
     "filters": ["inpatient"],
     "tags": ["Inpatient Care", "Nursing"]
   },
   {
     "id": 7,
-    "image": "/images/gallery/1-7.JPG",
+    "image": "/images/gallery/1-7.jpg",
     "title": "Private Patient Room",
     "filters": ["inpatient"],
     "tags": ["Private Room", "Comfort"]
   },
   {
     "id": 8,
-    "image": "/images/gallery/1-8.JPG",
+    "image": "/images/gallery/1-8.jpg",
     "title": "Operation Theatre",
     "filters": ["surgery"],
     "tags": ["OT", "Advanced Equipment"]
   },
   {
     "id": 9,
-    "image": "/images/gallery/1-9.JPG",
+    "image": "/images/gallery/1-9.jpg",
     "title": "Central Sterilization",
     "filters": ["support-services", "surgery"],
     "tags": ["CSSD", "Infection Control"]
