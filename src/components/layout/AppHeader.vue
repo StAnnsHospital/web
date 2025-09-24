@@ -12,10 +12,12 @@
           </div>
           <div class="top-right">
             <ul class="social-icon-one">
-              <li><a :href="siteConfig.social.facebook"><span class="fab fa-facebook-f"></span></a></li>
-              <li><a :href="siteConfig.social.twitter"><span class="fab fa-twitter"></span></a></li>
-              <li><a :href="siteConfig.social.skype"><span class="fab fa-skype"></span></a></li>
-              <li><a :href="siteConfig.social.linkedin"><span class="fab fa-linkedin-in"></span></a></li>
+              <li v-if="siteConfig.social.facebook !== '#'"><a :href="siteConfig.social.facebook"><span class="fab fa-facebook-f"></span></a></li>
+              <li v-if="siteConfig.social.twitter !== '#'"><a :href="siteConfig.social.twitter"><span class="fab fa-twitter"></span></a></li>
+              <li v-if="siteConfig.social.skype !== '#'"><a :href="siteConfig.social.skype"><span class="fab fa-skype"></span></a></li>
+              <li v-if="siteConfig.social.linkedin !== '#'"><a :href="siteConfig.social.linkedin"><span class="fab fa-linkedin-in"></span></a></li>
+              <li v-if="siteConfig.social.instagram !== '#'"><a :href="siteConfig.social.instagram"><span class="fab fa-instagram"></span></a></li>
+              <li v-if="siteConfig.social.pinterest !== '#'"><a :href="siteConfig.social.pinterest"><span class="fab fa-pinterest"></span></a></li>
             </ul>
           </div>
         </div>
@@ -470,10 +472,11 @@ onMounted(() => {
           {
             "position": "bottom",
             "content": [
-              "<a class='fab fa-facebook-f' href='#'></a>",
-              "<a class='fab fa-twitter' href='#'></a>",
-              "<a class='fab fa-linkedin-in' href='#'></a>",
-              "<a class='fab fa-instagram' href='#'></a>"
+              ...(siteConfig.value.social.facebook !== '#' ? ["<a class='fab fa-facebook-f' href='" + siteConfig.value.social.facebook + "'></a>"] : []),
+              ...(siteConfig.value.social.twitter !== '#' ? ["<a class='fab fa-twitter' href='" + siteConfig.value.social.twitter + "'></a>"] : []),
+              ...(siteConfig.value.social.linkedin !== '#' ? ["<a class='fab fa-linkedin-in' href='" + siteConfig.value.social.linkedin + "'></a>"] : []),
+              ...(siteConfig.value.social.instagram !== '#' ? ["<a class='fab fa-instagram' href='" + siteConfig.value.social.instagram + "'></a>"] : []),
+              ...(siteConfig.value.social.pinterest !== '#' ? ["<a class='fab fa-pinterest' href='" + siteConfig.value.social.pinterest + "'></a>"] : [])
             ]
           }
         ]

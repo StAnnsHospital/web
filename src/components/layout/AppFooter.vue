@@ -20,11 +20,12 @@
                     <p>We’re a 200-bed multispecialty center with 24×7 Emergency, ICU/NICU, a LINAC-equipped Cancer Block, and a School & College of Nursing.</p>
                   </div>
                   <ul class="social-icon-three">
-                    <li><a :href="siteConfig.social.facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a :href="siteConfig.social.pinterest"><i class="fab fa-pinterest"></i></a></li>
-                    <li><a :href="siteConfig.social.twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li><a :href="siteConfig.social.skype"><i class="fab fa-skype"></i></a></li>
-                    <li><a :href="siteConfig.social.linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li v-if="siteConfig.social.facebook !== '#'"><a :href="siteConfig.social.facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li v-if="siteConfig.social.pinterest !== '#'"><a :href="siteConfig.social.pinterest"><i class="fab fa-pinterest"></i></a></li>
+                    <li v-if="siteConfig.social.twitter !== '#'"><a :href="siteConfig.social.twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li v-if="siteConfig.social.skype !== '#'"><a :href="siteConfig.social.skype"><i class="fab fa-skype"></i></a></li>
+                    <li v-if="siteConfig.social.linkedin !== '#'"><a :href="siteConfig.social.linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li v-if="siteConfig.social.instagram !== '#'"><a :href="siteConfig.social.instagram"><i class="fab fa-instagram"></i></a></li>
                   </ul>
                 </div>
               </div>

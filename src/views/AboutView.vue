@@ -27,7 +27,7 @@
             <div class="inner-column">
               <div class="sec-title">
                 <span class="sub-title">ABOUT US</span>
-                <h2 class="text-reveal-anim">St. Ann's Cancer and General Hospital</h2>
+                <h2 class="text-reveal-anim">St. Ann's Multispecialty Hospital</h2>
                 <span class="divider"></span>
                 <p class="lead-text">St. Ann's Cancer and General Hospital is a multi-specialty hospital located in Fathimanagar, Kazipet Mandal, Hanumakonda District, Telangana, India. It is a <strong>private, nonprofit, self-financing medical institution</strong>, committed to community service. The hospital primarily caters to the healthcare needs of the general population, with a special focus on the <strong>needy, underprivileged, and suffering sections</strong> of society.</p>
                 <p>Established in <strong>1954</strong> by the <strong>Society of the Sisters of St. Ann of Providence, Central India</strong>, the hospital continues to uphold its legacy of compassion, care, and commitment to holistic healing.</p>
